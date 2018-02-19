@@ -29,6 +29,28 @@ header{
 }
 
 /* NAV */
+@keyframes animacao-nav{
+	from{
+		top:-100px;
+		opacity: 0;
+	}
+	to {
+		top:0px;
+	}
+}
+
+@keyframes animacao-bg{
+	from{
+		top:100px;
+		left: -400px;
+		opacity: 0;
+	}
+
+	to{
+		left: 0px;
+		top: 250px;
+	}
+}
 
 h1#logo a{
 	float: left;
@@ -45,6 +67,7 @@ h1#logo a{
 }
 
 nav{
+	animation: animacao-nav 2s 0s 1;
 	z-index: 100;
 	position: fixed;
 	top: 0;
@@ -107,6 +130,7 @@ label[for="btmenu"]{
 
 /* BANNER */
 #text-bg{
+	animation: animacao-bg 2s 0s 1;
 	top: 250px;
 	text-align: center;
 	position: relative;
