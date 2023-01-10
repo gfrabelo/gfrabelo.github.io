@@ -1,0 +1,28 @@
+$mobile: '1023px';
+$desktop: '1024px';
+$mediadesktop: '(min-width:' + $desktop + ')';
+$mediamobile: '(max-width:' + $mobile + ')';
+$primaryColor: #1E90FF;
+$secundaryColor: rgba(0, 0, 0, 0.7);
+
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	font-family: 'Trebuchet MS', sans-serif;
+	letter-spacing: 1px;
+}
+
+.anime {
+	opacity: 0;
+	transform: translate3d(-250px,0,0);
+	transition: .5s;
+}
+
+.anime-start {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}

@@ -1,0 +1,39 @@
+/* CONTATO */
+#contato{
+	padding-top: 60px;
+	text-align: center;
+	width: 100%;
+	margin: auto;
+	height: 441px;
+	color: $secundaryColor;
+}
+
+#contato h1{
+	padding-bottom: 40px;
+ 	font-size: 50px;
+	letter-spacing: -1px;
+}
+
+#contato p{
+	font-size: 17px;
+	margin-bottom: 6px;
+	color: rgba(0,0,0,.6);
+}
+
+#contato p.bolder{
+	margin-bottom: 10px;
+	color: $secundaryColor;
+	font-size: 25px;
+	font-weight: 800;
+}
+
+/* RODAPE */
+footer{
+	padding-top: 30px;
+	color: $secundaryColor;
+	clear: both;
+	width: 100%;
+	height: 50px;
+	background: #ddd;
+	text-align: center;
+}

@@ -1,0 +1,54 @@
+#portfolio{
+	text-align: center;
+	width: 100%;
+	margin: auto;
+	height: 100vh;
+	color: $secundaryColor;
+	background: #ddd;
+}
+
+ #portfolio h1{
+ 	padding-bottom:50px;
+ 	padding-top: 60px;
+ 	font-size: 50px;
+	letter-spacing: -1px;
+ }
+
+#portfolio ul{
+	display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 60vw;
+    margin: auto;
+}
+
+#portfolio ul li{
+	box-shadow: 0px 0px 13px 1px rgba(0,0,0,.5);
+	list-style: none;
+	margin: 20px;
+	width: 330px;
+	height: 264px;
+    background-size: cover;
+    background-repeat: no-repeat;
+	
+}
+
+#portfolio ul li:hover{
+	transform: scale(1.1);
+	transition: all .4s ease-in;
+}
+#portfolio ul li#projeto1{
+	background-image: url("../img/membership-nike.png");
+}
+#portfolio ul li#projeto2{
+	background-image: url("../img/central-de-uniformes-nike.png");
+}
+#portfolio ul li#projeto3{
+	background-image: url("../img/cartao-presente-nike.png");
+}
+#portfolio ul li#projeto4{
+	background-image: url("../img/eliana-jequiti.png");
+}
+#portfolio ul li#projeto5{
+	background-image: url("../img/carlinhos-maia-jequiti.png");
+}

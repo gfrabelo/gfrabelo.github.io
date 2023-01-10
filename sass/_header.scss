@@ -1,0 +1,146 @@
+header{
+	background: url(../img/bgbody6.jpeg);
+	background-attachment: fixed;
+	width: auto;
+	height: 100vh;
+
+    nav{
+        /* animation: animacao-nav 2s 0s 1; */
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5.3vw;
+        background: rgba(0,0,0,.9);
+        display: flex;
+        justify-content: space-between;
+
+        /* LOGO */
+        #logo a{
+            position: absolute;	
+            margin: 1.3vw 2vw;
+            letter-spacing: -1px;
+            color: $primaryColor;
+            text-decoration: none;
+            font-size: 2vw;
+        }
+        #out{
+            color: #eee;
+        }        
+
+        /* MENU */
+        #btmenu{
+            display: none;
+        }
+        
+        label[for="btmenu"]{
+            float: right;
+            position: relative;
+            top: 15px;
+            right: 30px;
+            cursor: pointer;
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            padding: 5px;
+            color: #eee;
+            font-family: "Arial";
+        }
+
+        ul {
+            margin: 2vw;
+            position: absolute;
+        }
+        
+         ul li{
+            display: inline-block;
+            padding-right: .7vw;
+        }
+        
+         ul li a{
+            text-transform: uppercase;
+            border-radius: 7px;
+            font-size: .8vw;
+            padding: .7vw;
+            text-decoration: none;
+            color: #eee;
+        }
+        
+         ul li a.menu:hover{
+            color: white;
+            background: $primaryColor;
+            border-radius: 7px;
+            transition: all .6s;
+        }
+    }     
+}
+
+
+/* BANNER */
+#text-bg{
+	/* animation: animacao-bg 2s 0s 1; */
+	top: 17vw;
+	text-align: center;
+	position: relative;
+
+    h1{
+        font-weight: bold;
+        color: $primaryColor;
+        letter-spacing: -3px;
+        text-shadow: 2px 2px 3px rgba(0,0,0,.4);
+        font-size: 5.3vw;
+    }
+    
+    h2{
+        color: #eee;
+        font-weight: 700;
+        font-size: 2vw;
+        margin-bottom: 1.9vw;
+    }
+    
+    .linkedin-bt {
+        color: #fff;
+        text-decoration: none;
+        border: 3px solid $primaryColor;
+        padding: .86vw 1.66vw;
+        background: rgba(0,0,0,.6);
+        border-radius: 7px;
+        font-weight: bold;
+        font-size: .95vw;
+    }
+    
+    .linkedin-bt:hover {
+        background: rgba(0,0,0,.9);
+        text-shadow: 1px 1px 2px $primaryColor;
+        transition: all .3s ease-in;
+        letter-spacing: 5px;
+        
+    }
+}
+
+
+
+/* ANIMAÇÃO  */
+// @keyframes animacao-nav{
+// 	from{
+// 		top:-100px;
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		top:0px;
+// 	}
+// }
+
+// @keyframes animacao-bg{
+// 	from{
+// 		top:100px;
+// 		left: -400px;
+// 		opacity: 0;
+// 	}
+
+// 	to{
+// 		left: 0px;
+// 		top: 250px;
+// 	}
+// }

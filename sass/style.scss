@@ -1,0 +1,105 @@
+@import './patterns';
+@import './header';
+@import './about';
+@import './portfolio';
+@import './contact';
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 767px){
+
+	/* NAV */
+	label[for="btmenu"]{
+		display: block;
+	}
+
+	h1#logo a{
+		left: 20px;
+	}
+
+	#menu ul{
+		width: 100%;
+		height: 200px;
+		transition: all .4s;
+		background: rgba(0,0,0,.9);
+		top: -500px;
+		right: 0;
+	}
+
+	#btmenu:checked ~  #menu ul{
+		top: 30px;
+		right: 0;
+	}
+
+	#menu ul li{	
+		padding: 10px 30px;
+		display: block;
+	}
+
+	/* BANNER */
+	#text-bg h1{
+		font-size: 50px;
+	}
+
+	#text-bg h2{
+		font-size: 24px;
+	}
+
+	/* SOBRE, PORTFOLIO, CONTATO */
+
+	#sobre{
+		height: 640px;
+		width: auto;
+	}
+
+	#sobre h1{
+		padding-top: 40px;
+		font-size: 35px;
+	}
+
+	#sobre h2{
+		font-size: 25px;
+	}
+
+	#portfolio{
+		height: auto;
+	}
+
+	#portfolio h1{
+		padding-top: 40px;
+		padding-bottom: 30px;
+	}
+
+	
+
+	#contato h1{
+		font-size: 38px;
+	}
+}
+
+@media screen and (min-width: 768px){
+	h1#logo a{
+		left: 10px;
+	}
+
+	nav ul{
+		right: 10px;
+	}
+
+	nav ul li{
+		padding-right: 7px;
+	}
+}
+
+@media screen and (min-width: 992px){
+	h1#logo a{
+		left: 60px;
+	}
+
+	nav ul{
+		right: 50px;
+	}
+
+	#porfolio{
+		height: 590px;
+	}
+}

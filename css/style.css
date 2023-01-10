@@ -1,0 +1,341 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+}
+
+.anime {
+  opacity: 0;
+  transform: translate3d(-250px, 0, 0);
+  transition: 0.5s;
+}
+
+.anime-start {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+header {
+  background: url(../img/bgbody6.jpeg);
+  background-attachment: fixed;
+  width: auto;
+  height: 100vh;
+}
+header nav {
+  /* animation: animacao-nav 2s 0s 1; */
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5.3vw;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: space-between;
+  /* LOGO */
+  /* MENU */
+}
+header nav #logo a {
+  position: absolute;
+  margin: 1.3vw 2vw;
+  letter-spacing: -1px;
+  color: #1E90FF;
+  text-decoration: none;
+  font-size: 2vw;
+}
+header nav #out {
+  color: #eee;
+}
+header nav #btmenu {
+  display: none;
+}
+header nav label[for=btmenu] {
+  float: right;
+  position: relative;
+  top: 15px;
+  right: 30px;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+  font-size: 30px;
+  padding: 5px;
+  color: #eee;
+  font-family: "Arial";
+}
+header nav ul {
+  margin: 2vw;
+  position: absolute;
+}
+header nav ul li {
+  display: inline-block;
+  padding-right: 0.7vw;
+}
+header nav ul li a {
+  text-transform: uppercase;
+  border-radius: 7px;
+  font-size: 0.8vw;
+  padding: 0.7vw;
+  text-decoration: none;
+  color: #eee;
+}
+header nav ul li a.menu:hover {
+  color: white;
+  background: #1E90FF;
+  border-radius: 7px;
+  transition: all 0.6s;
+}
+
+/* BANNER */
+#text-bg {
+  /* animation: animacao-bg 2s 0s 1; */
+  top: 17vw;
+  text-align: center;
+  position: relative;
+}
+#text-bg h1 {
+  font-weight: bold;
+  color: #1E90FF;
+  letter-spacing: -3px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  font-size: 5.3vw;
+}
+#text-bg h2 {
+  color: #eee;
+  font-weight: 700;
+  font-size: 2vw;
+  margin-bottom: 1.9vw;
+}
+#text-bg .linkedin-bt {
+  color: #fff;
+  text-decoration: none;
+  border: 3px solid #1E90FF;
+  padding: 0.86vw 1.66vw;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 0.95vw;
+}
+#text-bg .linkedin-bt:hover {
+  background: rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px #1E90FF;
+  transition: all 0.3s ease-in;
+  letter-spacing: 5px;
+}
+
+/* ANIMAÇÃO  */
+#sobre {
+  color: rgba(0, 0, 0, 0.7);
+  margin: auto;
+  width: 40vw;
+  text-align: center;
+  height: 80vh;
+  padding-top: 5vw;
+}
+
+#sobre img {
+  width: 10vw;
+  margin: 1.33vw;
+  border-radius: 100px;
+  border: 4px solid white;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+}
+
+#sobre h1 {
+  font-size: 2vw;
+  letter-spacing: -1px;
+}
+
+#sobre h2 {
+  font-size: 2vw;
+  margin-bottom: 1.33vw;
+  letter-spacing: -1px;
+}
+
+#sobre p {
+  font-size: 1.06vw;
+}
+
+#portfolio {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+  color: rgba(0, 0, 0, 0.7);
+  background: #ddd;
+}
+
+#portfolio h1 {
+  padding-bottom: 50px;
+  padding-top: 60px;
+  font-size: 50px;
+  letter-spacing: -1px;
+}
+
+#portfolio ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 60vw;
+  margin: auto;
+}
+
+#portfolio ul li {
+  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.5);
+  list-style: none;
+  margin: 20px;
+  width: 330px;
+  height: 264px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#portfolio ul li:hover {
+  transform: scale(1.1);
+  transition: all 0.4s ease-in;
+}
+
+#portfolio ul li#projeto1 {
+  background-image: url("../img/membership-nike.png");
+}
+
+#portfolio ul li#projeto2 {
+  background-image: url("../img/central-de-uniformes-nike.png");
+}
+
+#portfolio ul li#projeto3 {
+  background-image: url("../img/cartao-presente-nike.png");
+}
+
+#portfolio ul li#projeto4 {
+  background-image: url("../img/eliana-jequiti.png");
+}
+
+#portfolio ul li#projeto5 {
+  background-image: url("../img/carlinhos-maia-jequiti.png");
+}
+
+/* CONTATO */
+#contato {
+  padding-top: 60px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  height: 441px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#contato h1 {
+  padding-bottom: 40px;
+  font-size: 50px;
+  letter-spacing: -1px;
+}
+
+#contato p {
+  font-size: 17px;
+  margin-bottom: 6px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#contato p.bolder {
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 25px;
+  font-weight: 800;
+}
+
+/* RODAPE */
+footer {
+  padding-top: 30px;
+  color: rgba(0, 0, 0, 0.7);
+  clear: both;
+  width: 100%;
+  height: 50px;
+  background: #ddd;
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 767px) {
+  /* NAV */
+  label[for=btmenu] {
+    display: block;
+  }
+  h1#logo a {
+    left: 20px;
+  }
+  #menu ul {
+    width: 100%;
+    height: 200px;
+    transition: all 0.4s;
+    background: rgba(0, 0, 0, 0.9);
+    top: -500px;
+    right: 0;
+  }
+  #btmenu:checked ~ #menu ul {
+    top: 30px;
+    right: 0;
+  }
+  #menu ul li {
+    padding: 10px 30px;
+    display: block;
+  }
+  /* BANNER */
+  #text-bg h1 {
+    font-size: 50px;
+  }
+  #text-bg h2 {
+    font-size: 24px;
+  }
+  /* SOBRE, PORTFOLIO, CONTATO */
+  #sobre {
+    height: 640px;
+    width: auto;
+  }
+  #sobre h1 {
+    padding-top: 40px;
+    font-size: 35px;
+  }
+  #sobre h2 {
+    font-size: 25px;
+  }
+  #portfolio {
+    height: auto;
+  }
+  #portfolio h1 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  #contato h1 {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1#logo a {
+    left: 10px;
+  }
+  nav ul {
+    right: 10px;
+  }
+  nav ul li {
+    padding-right: 7px;
+  }
+}
+@media screen and (min-width: 992px) {
+  h1#logo a {
+    left: 60px;
+  }
+  nav ul {
+    right: 50px;
+  }
+  #porfolio {
+    height: 590px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
