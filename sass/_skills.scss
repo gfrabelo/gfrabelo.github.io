@@ -1,0 +1,38 @@
+#skills {
+    background-color: #ddd;
+    width: 100%;
+    height: 100vh;
+    .skill-block {
+        margin: auto;
+        display: flex;
+        width: 35vw;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__item {
+            width: 8vw;
+            border: 1px solid $white;
+            margin: .6vw 0;
+            background-color: rgba(0,0,0,.2);
+            h3 {
+                color: #fff;
+                text-align: center;
+                margin-top: 1.1vw;
+            }
+            img {
+                width: 100%;
+                padding: 1vw 2vw;
+                filter: grayscale(1);
+            }
+        }
+
+        &__item:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+	transition: all .2s ease-in;
+            img {
+                filter: grayscale(0);
+            }
+        }
+
+    }
+}

@@ -13,12 +13,19 @@ body {
 .anime {
   opacity: 0;
   transform: translate3d(-250px, 0, 0);
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .anime-start {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+h2.block-title {
+  padding-bottom: 1.4vw;
+  font-size: 2vw;
+  letter-spacing: -1px;
+  text-align: center;
 }
 
 header {
@@ -95,8 +102,8 @@ header nav ul li a.menu:hover {
 #text-bg {
   /* animation: animacao-bg 2s 0s 1; */
   top: 17vw;
-  text-align: center;
-  position: relative;
+  left: 5vw;
+  position: absolute;
 }
 #text-bg h1 {
   font-weight: bold;
@@ -104,12 +111,37 @@ header nav ul li a.menu:hover {
   letter-spacing: -3px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
   font-size: 5.3vw;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
 }
 #text-bg h2 {
   color: #eee;
   font-weight: 700;
   font-size: 2vw;
   margin-bottom: 1.9vw;
+}
+#text-bg .typing {
+  animation: blinkCursor 0.7s steps(40) normal, typingAnimation 3s steps(40) 1s normal both;
+}
+@keyframes typingAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 49vw;
+  }
+}
+@keyframes blinkCursor {
+  0% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #fff;
+  }
+  100% {
+    border-right-color: transparent;
+  }
 }
 #text-bg .linkedin-bt {
   color: #fff;
@@ -126,6 +158,13 @@ header nav ul li a.menu:hover {
   text-shadow: 1px 1px 2px #1E90FF;
   transition: all 0.3s ease-in;
   letter-spacing: 5px;
+}
+
+.coding-animate {
+  position: absolute;
+  right: 5vw;
+  top: 7vw;
+  cursor: pointer;
 }
 
 /* ANIMAÇÃO  */
@@ -161,13 +200,50 @@ header nav ul li a.menu:hover {
   font-size: 1.06vw;
 }
 
+#skills {
+  background-color: #ddd;
+  width: 100%;
+  height: 100vh;
+}
+#skills .skill-block {
+  margin: auto;
+  display: flex;
+  width: 35vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#skills .skill-block__item {
+  width: 8vw;
+  border: 1px solid #fff;
+  margin: 0.6vw 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#skills .skill-block__item h3 {
+  color: #fff;
+  text-align: center;
+  margin-top: 1.1vw;
+}
+#skills .skill-block__item img {
+  width: 100%;
+  padding: 1vw 2vw;
+  filter: grayscale(1);
+}
+#skills .skill-block__item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in;
+}
+#skills .skill-block__item:hover img {
+  filter: grayscale(0);
+}
+
 #portfolio {
   text-align: center;
   width: 100%;
   margin: auto;
   height: 100vh;
   color: rgba(0, 0, 0, 0.7);
-  background: #ddd;
+  background: #fff;
 }
 
 #portfolio h1 {

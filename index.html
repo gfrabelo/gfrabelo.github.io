@@ -26,26 +26,65 @@
 			</div>
 		</nav>
 		<div id="text-bg">
-			<h1>Desenvolvedor Web</h1>
-			<h2>Criando sites com eficiência!</h2>
+			<h1 class="typing">Desenvolvedor Web</h1>
+			<h2 class="">Criando sites com eficiência!</h2>
 			<a href="https://www.linkedin.com/in/gabrielrabelob/" target="_blank" class="linkedin-bt">LinkedIn</a>
+			
 		</div>
+		<img src="img/coding.png" class="coding-animate"  data-tilt>
 	</header>
 
 	<!-- SOBRE -->
 	<section id="sobre" class="anime anime-start">
 		<img src="img/me.png">
-		<h2>Desenvolvedor Web - Front-end</h2>
+		<h2 class="block-title">Desenvolvedor Web - Front-end</h2>
 		<p>Olá, meu nome é Gabriel Rabelo, moro em São Paulo/capital e há  5 anos me aventuro no incrível mundo dos códigos!</p>
 		<p> Através de influência familiar me interessei pela área e passei a estudar desde pequeno. Amo criar sites e por em prática tudo que aprendi com <b>HTML</b>, <b>CSS</b> e <b>JavaScript</b>.</p>
 		<p>Estou sempre buscando aprender mais, pois o mundo da tecnologia pode nos trazer infinitas possibilidades de criação. Me divirto fazendo isso e busco projetar layouts que ofereçam ótimas experiências para meus futuros clientes!</p>
 	</section>
 
-	
+	<!-- HABILIDADES  -->
+	<section id="skills">
+		<h2 class="block-title">Habilidades</h2>
+		<div class="skill-block">
+			<div class="skill-block__item">
+				<h3>HTML5</h3>
+				<img src="img/html.png">
+			</div>
+			<div class="skill-block__item">
+				<h3>CSS3</h3>
+				<img src="img/css.png">
+			</div>
+			<div class="skill-block__item">
+				<h3>Sass</h3>
+				<img src="img/sass.png">
+			</div>
+			<div class="skill-block__item">
+				<h3>JavaScript</h3>
+				<img src="img/java-script.png">
+			</div>
+			<div class="skill-block__item">
+				<h3>React</h3>
+				<img src="img/physics.png">
+			</div>
+			<div class="skill-block__item">
+				<h3>Git</h3>
+				<img src="img/git.png">
+			</div>
+			<div class="skill-block__item">
+				<h3>Github</h3>
+				<img src="img/github-sign.png">
+			</div>
+			<div class="skill-block__item">
+				<h3>Figma</h3>
+				<img src="img/figma.png">
+			</div>
+		</div>
+	</section>
 
 	<!-- PORTFOLIO -->
 	<section id="portfolio" class="anime anime-start">
-		<h1>Portfolio</h1>
+		<h2 class="block-title">Portfolio</h2>
 		<ul>
 			<li id="projeto1"></li>
 			<li id="projeto2"></li>
@@ -57,7 +96,7 @@
 
 	<!-- CONTATO -->
 	<section id="contato"  class="anime anime-start">
-		<h1>Entre em contato</h1>
+		<h2 class="block-title">Entre em contato</h2>
 		<p>Gostou do que viu? Vamos trabalhar juntos!</p>
 		<p>Sinta-se a vontade para entrar em contato no email:</p><br>
 		<p class="bolder">gabrielrabelob@gmail.com</p><br>
@@ -75,6 +114,17 @@
 	</footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="jquery.js"></script>	
+<script src="jquery.js"></script>
+<script src="tilt.jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.coding-animate').tilt({
+			glare: true,
+			maxGlare: .5,
+			scale : 1
+		})
+	})
+	
+</script>		
 </body>
 </html>
