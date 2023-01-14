@@ -2,10 +2,18 @@ $mobile: '1023px';
 $desktop: '1024px';
 $mediadesktop: '(min-width:' + $desktop + ')';
 $mediamobile: '(max-width:' + $mobile + ')';
+
+
 $primaryColor: #1E90FF;
 $secundaryColor: rgba(0, 0, 0, 0.7);
 $white : #fff;
 $grey: #ddd;
+$html: #ff7816;
+$sass: #cd6699;
+$github: #5c6bc0;
+$javascript: #ffdf00;
+$figma: #3747d6;
+$react: #00cfdd;
 
 *{
 	margin: 0;
@@ -30,7 +38,7 @@ body{
 }
 
 h2.block-title {
-	padding-bottom: 1.4vw;
+	padding: 1.6vw 0;
  	font-size: 2vw;
 	letter-spacing: -1px;
 	text-align: center;

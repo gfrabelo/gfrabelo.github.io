@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +21,7 @@ body {
 }
 
 h2.block-title {
-  padding-bottom: 1.4vw;
+  padding: 1.6vw 0;
   font-size: 2vw;
   letter-spacing: -1px;
   text-align: center;
@@ -33,6 +32,7 @@ header {
   background-attachment: fixed;
   width: auto;
   height: 100vh;
+  /* TEXT HEADER */
 }
 header nav {
   /* animation: animacao-nav 2s 0s 1; */
@@ -97,15 +97,12 @@ header nav ul li a.menu:hover {
   border-radius: 7px;
   transition: all 0.6s;
 }
-
-/* BANNER */
-#text-bg {
-  /* animation: animacao-bg 2s 0s 1; */
+header #text-bg {
   top: 17vw;
   left: 5vw;
   position: absolute;
 }
-#text-bg h1 {
+header #text-bg h1 {
   font-weight: bold;
   color: #1E90FF;
   letter-spacing: -3px;
@@ -115,13 +112,13 @@ header nav ul li a.menu:hover {
   white-space: nowrap;
   border-right: 2px solid #fff;
 }
-#text-bg h2 {
+header #text-bg h2 {
   color: #eee;
   font-weight: 700;
   font-size: 2vw;
   margin-bottom: 1.9vw;
 }
-#text-bg .typing {
+header #text-bg .typing {
   animation: blinkCursor 0.7s steps(40) normal, typingAnimation 3s steps(40) 1s normal both;
 }
 @keyframes typingAnimation {
@@ -143,7 +140,7 @@ header nav ul li a.menu:hover {
     border-right-color: transparent;
   }
 }
-#text-bg .linkedin-bt {
+header #text-bg .linkedin-bt {
   color: #fff;
   text-decoration: none;
   border: 3px solid #1E90FF;
@@ -153,28 +150,33 @@ header nav ul li a.menu:hover {
   font-weight: bold;
   font-size: 0.95vw;
 }
-#text-bg .linkedin-bt:hover {
+header #text-bg .linkedin-bt:hover {
   background: rgba(0, 0, 0, 0.9);
   text-shadow: 1px 1px 2px #1E90FF;
   transition: all 0.3s ease-in;
   letter-spacing: 5px;
 }
-
-.coding-animate {
+header .coding-animate {
   position: absolute;
-  right: 5vw;
-  top: 7vw;
+  right: 10vw;
+  top: 12vw;
+  width: 18vw;
+  height: 18vw;
   cursor: pointer;
+  background: url(../img/coding.png) no-repeat;
+  background-size: contain;
 }
 
-/* ANIMAÇÃO  */
 #sobre {
-  color: rgba(0, 0, 0, 0.7);
-  margin: auto;
   width: 40vw;
-  text-align: center;
-  height: 80vh;
+  height: 85vh;
+  margin: auto;
   padding-top: 5vw;
+}
+#sobre .desc {
+  text-align: center;
+  width: 40vw;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 #sobre img {
@@ -185,17 +187,6 @@ header nav ul li a.menu:hover {
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
 }
 
-#sobre h1 {
-  font-size: 2vw;
-  letter-spacing: -1px;
-}
-
-#sobre h2 {
-  font-size: 2vw;
-  margin-bottom: 1.33vw;
-  letter-spacing: -1px;
-}
-
 #sobre p {
   font-size: 1.06vw;
 }
@@ -204,6 +195,13 @@ header nav ul li a.menu:hover {
   background-color: #ddd;
   width: 100%;
   height: 100vh;
+  background-attachment: fixed;
+  background-image: url(../img/bgbody3.jpg);
+  background-size: contain;
+  padding-top: 10vw;
+}
+#skills .block-title {
+  color: #fff;
 }
 #skills .skill-block {
   margin: auto;
@@ -216,22 +214,45 @@ header nav ul li a.menu:hover {
   width: 8vw;
   border: 1px solid #fff;
   margin: 0.6vw 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 1vw 1vw 0 1vw;
 }
 #skills .skill-block__item h3 {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.7);
   text-align: center;
   margin-top: 1.1vw;
 }
 #skills .skill-block__item img {
   width: 100%;
   padding: 1vw 2vw;
-  filter: grayscale(1);
+  filter: grayscale(0.9);
+}
+#skills .skill-block__item:hover:nth-child(1) h3 {
+  color: #ff7816;
+}
+#skills .skill-block__item:hover:nth-child(3) h3 {
+  color: #cd6699;
+}
+#skills .skill-block__item:hover:nth-child(4) h3 {
+  color: #ffdf00;
+}
+#skills .skill-block__item:hover:nth-child(5) h3 {
+  color: #00cfdd;
+}
+#skills .skill-block__item:hover:nth-child(7) h3 {
+  color: #5c6bc0;
+}
+#skills .skill-block__item:hover:nth-child(8) h3 {
+  color: #3747d6;
 }
 #skills .skill-block__item:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.04);
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.6);
   transition: all 0.2s ease-in;
+}
+#skills .skill-block__item:hover h3 {
+  color: #1E90FF;
 }
 #skills .skill-block__item:hover img {
   filter: grayscale(0);

@@ -73,110 +73,95 @@ header{
             border-radius: 7px;
             transition: all .6s;
         }
-    }     
-}
+    }
 
+    /* TEXT HEADER */
+    #text-bg{
+        top: 17vw;
+        left: 5vw;
+        position: absolute;
 
-/* BANNER */
-#text-bg{
-	/* animation: animacao-bg 2s 0s 1; */
-	top: 17vw;
-	left: 5vw;
-	position: absolute;
-
-    h1{
-        font-weight: bold;
-        color: $primaryColor;
-        letter-spacing: -3px;
-        text-shadow: 2px 2px 3px rgba(0,0,0,.4);
-        font-size: 5.3vw;
-        overflow: hidden;
-        white-space: nowrap;
+        h1{
+            font-weight: bold;
+            color: $primaryColor;
+            letter-spacing: -3px;
+            text-shadow: 2px 2px 3px rgba(0,0,0,.4);
+            font-size: 5.3vw;
+            overflow: hidden;
+            white-space: nowrap;
+            
+            border-right: 2px solid $white;
+        }
         
-        border-right: 2px solid $white;
-    }
-    
-    h2{
-        color: #eee;
-        font-weight: 700;
-        font-size: 2vw;
-        margin-bottom: 1.9vw;
-    }
+        h2{
+            color: #eee;
+            font-weight: 700;
+            font-size: 2vw;
+            margin-bottom: 1.9vw;
+        }
 
-    .typing {
-        animation: blinkCursor .7s steps(40) normal, typingAnimation 3s steps(40) 1s normal both;
-    }
+        .typing {
+            animation: blinkCursor .7s steps(40) normal, typingAnimation 3s steps(40) 1s normal both;
+        }
 
-    @keyframes typingAnimation {
-        from {
-            width: 0;
+        @keyframes typingAnimation {
+            from {
+                width: 0;
+            }
+            to {
+                width: 49vw;
+            }
         }
-        to {
-            width: 49vw;
-        }
-    }
 
-    @keyframes blinkCursor {
-        0% {
-            border-right-color: transparent;
+        @keyframes blinkCursor {
+            0% {
+                border-right-color: transparent;
+            }
+            50% {
+                border-right-color: $white;
+            }
+            100% {
+                border-right-color: transparent;
+            }
         }
-        50% {
-            border-right-color: $white;
+        
+        .linkedin-bt {
+            color: #fff;
+            text-decoration: none;
+            border: 3px solid $primaryColor;
+            padding: .86vw 1.66vw;
+            background: rgba(0,0,0,.6);
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: .95vw;
         }
-        100% {
-            border-right-color: transparent;
+        
+        .linkedin-bt:hover {
+            background: rgba(0,0,0,.9);
+            text-shadow: 1px 1px 2px $primaryColor;
+            transition: all .3s ease-in;
+            letter-spacing: 5px;
+            
         }
-    }
-    
-    .linkedin-bt {
-        color: #fff;
-        text-decoration: none;
-        border: 3px solid $primaryColor;
-        padding: .86vw 1.66vw;
-        background: rgba(0,0,0,.6);
-        border-radius: 7px;
-        font-weight: bold;
-        font-size: .95vw;
-    }
-    
-    .linkedin-bt:hover {
-        background: rgba(0,0,0,.9);
-        text-shadow: 1px 1px 2px $primaryColor;
-        transition: all .3s ease-in;
-        letter-spacing: 5px;
+
+        
         
     }
     
+    .coding-animate {
+        position: absolute;
+        right: 10vw;
+        top: 12vw;
+        width: 18vw;
+        height: 18vw;
+        cursor: pointer;
+        background: url(../img/coding.png) no-repeat;
+        background-size: contain;
+        
+    }
 }
 
 
-.coding-animate {
-    position: absolute;
-    right: 5vw;
-    top: 7vw;
-    cursor: pointer;
-}
 
-/* ANIMAÇÃO  */
-// @keyframes animacao-nav{
-// 	from{
-// 		top:-100px;
-// 		opacity: 0;
-// 	}
-// 	to {
-// 		top:0px;
-// 	}
-// }
 
-// @keyframes animacao-bg{
-// 	from{
-// 		top:100px;
-// 		left: -400px;
-// 		opacity: 0;
-// 	}
 
-// 	to{
-// 		left: 0px;
-// 		top: 250px;
-// 	}
-// }

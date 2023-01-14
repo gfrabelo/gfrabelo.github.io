@@ -1,10 +1,14 @@
-#sobre{
-    color: $secundaryColor;
-    margin: auto;
+#sobre{  
    width: 40vw;
-   text-align: center;
-   height: 80vh;
+   height: 85vh;
+   margin: auto;
    padding-top: 5vw;
+   .desc {
+      text-align: center;
+      width: 40vw;
+      
+      color: $secundaryColor;
+   }
 }
 
 #sobre img{
@@ -13,17 +17,6 @@
    border-radius: 100px;
    border: 4px solid white;
    box-shadow: 0px 0px 3px rgba(0,0,0,.6);
-}
-
-#sobre h1 {
-    font-size: 2vw;
-   letter-spacing: -1px;
-}
-
-#sobre h2{
-   font-size: 2vw;
-   margin-bottom: 1.33vw;
-   letter-spacing: -1px;
 }
 
 #sobre p{
