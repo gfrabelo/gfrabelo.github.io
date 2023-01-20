@@ -195,7 +195,7 @@ header .coding-animate {
   width: 100%;
   height: 100vh;
   background-attachment: fixed;
-  background-image: url(../img/bgbody3.jpg);
+  background-image: url(../img/bgbody4.png);
   background-size: contain;
   padding-top: 10vw;
 }
@@ -260,60 +260,57 @@ header .coding-animate {
 #portfolio {
   text-align: center;
   width: 100%;
-  margin: auto;
-  height: 100vh;
+  height: auto;
   color: rgba(0, 0, 0, 0.7);
   background: #fff;
+  padding-top: 3vw;
 }
-
-#portfolio h1 {
-  padding-bottom: 50px;
-  padding-top: 60px;
-  font-size: 50px;
-  letter-spacing: -1px;
-}
-
-#portfolio ul {
+#portfolio .box {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
-  width: 60vw;
+  width: 75vw;
   margin: auto;
 }
-
-#portfolio ul li {
-  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.5);
-  list-style: none;
-  margin: 20px;
-  width: 330px;
-  height: 264px;
+#portfolio .box__item {
+  width: 33vw;
+  height: 20vw;
+  overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 3vw 0;
+  position: relative;
+  border-bottom: 0.2vw solid #1E90FF;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.3s ease-in;
 }
-
-#portfolio ul li:hover {
-  transform: scale(1.04);
-  transition: all 0.4s ease-in;
+#portfolio .box__item img {
+  width: 100%;
 }
-
-#portfolio ul li#projeto1 {
-  background-image: url("../img/membership-nike.png");
+#portfolio .box__item .intro {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  backdrop-filter: blur(0.1vw);
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s ease-in;
 }
-
-#portfolio ul li#projeto2 {
-  background-image: url("../img/central-de-uniformes-nike.png");
+#portfolio .box__item .intro h3 {
+  color: #fff;
 }
-
-#portfolio ul li#projeto3 {
-  background-image: url("../img/cartao-presente-nike.png");
+#portfolio .box__item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 2vw rgba(0, 0, 0, 0.6);
 }
-
-#portfolio ul li#projeto4 {
-  background-image: url("../img/eliana-jequiti.png");
-}
-
-#portfolio ul li#projeto5 {
-  background-image: url("../img/carlinhos-maia-jequiti.png");
+#portfolio .box__item:hover .intro {
+  top: 0;
 }
 
 /* CONTATO */
