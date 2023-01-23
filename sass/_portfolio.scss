@@ -20,7 +20,8 @@
 			margin: 3vw 0;
 			position: relative;
 			border-bottom: .2vw solid $primaryColor;
-			box-shadow: 0 0 1vw rgba(0,0,0,.6);
+			box-shadow: 0 0 .5vw rgba(0,0,0,.4);
+			border-radius: .7vw;
 			cursor: pointer;
 			transition: .3s ease-in;
 			img {
@@ -28,7 +29,7 @@
 			}
 			.intro {
 				position: absolute;
-				top: -100%;
+				top: 100%;
 				left: 0;
 				backdrop-filter: blur(.1vw);
 				background-color: rgba(0,0,0,.4);
@@ -46,7 +47,6 @@
 		}
 		&__item:hover {
 			transform: scale(1.1);
-			box-shadow: 0 0 2vw rgba(0,0,0,.6);
 			.intro{
 				top: 0;
 			}

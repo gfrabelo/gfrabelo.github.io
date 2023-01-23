@@ -281,7 +281,8 @@ header .coding-animate {
   margin: 3vw 0;
   position: relative;
   border-bottom: 0.2vw solid #1E90FF;
-  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.4);
+  border-radius: 0.7vw;
   cursor: pointer;
   transition: 0.3s ease-in;
 }
@@ -290,7 +291,7 @@ header .coding-animate {
 }
 #portfolio .box__item .intro {
   position: absolute;
-  top: -100%;
+  top: 100%;
   left: 0;
   backdrop-filter: blur(0.1vw);
   background-color: rgba(0, 0, 0, 0.4);
@@ -307,7 +308,6 @@ header .coding-animate {
 }
 #portfolio .box__item:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 2vw rgba(0, 0, 0, 0.6);
 }
 #portfolio .box__item:hover .intro {
   top: 0;
