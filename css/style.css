@@ -294,10 +294,11 @@ header .coding-animate {
   box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.4);
   border-radius: 0.7vw;
   cursor: pointer;
-  transition: 0.3s ease-in;
 }
 #portfolio .box__item img {
   width: 100%;
+  transform: scale(1.15);
+  transition: 0.3s ease-in;
 }
 #portfolio .box__item .intro {
   position: absolute;
@@ -316,8 +317,8 @@ header .coding-animate {
 #portfolio .box__item .intro h3 {
   color: #fff;
 }
-#portfolio .box__item:hover {
-  transform: scale(1.1);
+#portfolio .box__item:hover img {
+  transform: scale(1);
 }
 #portfolio .box__item:hover .intro {
   top: 70%;

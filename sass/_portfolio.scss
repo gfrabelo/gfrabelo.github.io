@@ -23,9 +23,10 @@
 			box-shadow: 0 0 .5vw rgba(0,0,0,.4);
 			border-radius: .7vw;
 			cursor: pointer;
-			transition: .3s ease-in;
 			img {
 				width: 100%;
+				transform: scale(1.15);
+				transition: .3s ease-in;
 			}
 			.intro {
 				position: absolute;
@@ -46,7 +47,10 @@
 			}
 		}
 		&__item:hover {
-			transform: scale(1.1);
+			img {
+				transform: scale(1);
+			}
+			
 			.intro{
 				top: 70%;
 			}
