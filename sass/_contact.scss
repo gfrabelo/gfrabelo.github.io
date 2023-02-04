@@ -28,11 +28,12 @@
 
 /* RODAPE */
 footer{
-	padding-top: 30px;
 	color: $secundaryColor;
-	clear: both;
 	width: 100%;
-	height: 50px;
-	background: #ddd;
-	text-align: center;
+	height: 3.7vw;
+	background: $grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1vw;
 }
