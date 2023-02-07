@@ -89,7 +89,7 @@ header{
             text-shadow: 2px 2px 3px rgba(0,0,0,.4);
             font-size: 5.3vw;
             // border-right: 2px solid $white;
-            animation:  typingAnimation 1s steps(40) 1s normal both;
+            animation:  typingAnimation 1.6s steps(40) 1s normal both;
             overflow: hidden;
             white-space: nowrap;
             
@@ -101,7 +101,7 @@ header{
             font-size: 2vw;
             margin-bottom: 1.9vw;
             display: block;
-            animation: typingAnimation 1s steps(40) 2s normal both;
+            animation: typingAnimation 1.6s steps(40) 1.9s normal both;
             overflow: hidden;
             white-space: nowrap;
         }
@@ -169,6 +169,8 @@ header{
         background-size: contain;
         
     }
+    
+    /* MOBILE */
     @media #{$mediamobile} {
         nav {
             height: 20vw;
@@ -182,37 +184,46 @@ header{
             }
         }
 
-        #text-bg {
-            position: relative;
-            top: 80vw;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            h1.top-line {
-                font-size: 11vw;
-                animation: none;
-                margin: 5vw 0;
+        .content-header {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            padding-top: 40vw;
+            #text-bg {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                h1.top-line {
+                    font-size: 11vw;
+                    animation: none;
+                    margin: 5vw 0;
+                }
+                h2.bottom-line {
+                    font-size: 5vw;
+                    animation: none;
+                    margin-bottom: 10vw;
+                }
+                .linkedin-bt {
+                    padding: 4vw 7vw;
+                    font-size: 4vw;
+                    animation: none;
+                    opacity: 1;
+                }
             }
-            h2.bottom-line {
-                font-size: 5vw;
-                animation: none;
-                margin-bottom: 10vw;
-            }
-            .linkedin-bt {
-                padding: 4vw 7vw;
-                font-size: 4vw;
-                animation: none;
-                opacity: 1;
+    
+            .coding-animate {
+                margin: auto;
+                position: relative;
+                left: 0;
+                top: 0;
+                width: 70vw;
+                height: 70vw;
             }
         }
 
-        .coding-animate {
-            margin: auto;
-            left: 0;
-            top: 20vw;
-            width: 70vw;
-            height: 70vw;
-        }
+        
 
         #menu ul{
             width: 100%;

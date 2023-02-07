@@ -42,4 +42,8 @@ h2.block-title {
  	font-size: 2vw;
 	letter-spacing: -1px;
 	text-align: center;
+	@media #{$mediamobile} {
+		font-size: 7vw;
+		padding: 5vw 0;
+	}
 }

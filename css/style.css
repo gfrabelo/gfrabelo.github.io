@@ -26,6 +26,12 @@ h2.block-title {
   letter-spacing: -1px;
   text-align: center;
 }
+@media (max-width:1023px) {
+  h2.block-title {
+    font-size: 7vw;
+    padding: 5vw 0;
+  }
+}
 
 header {
   background: url(../img/bgbody6.jpeg);
@@ -33,6 +39,7 @@ header {
   width: auto;
   height: 100vh;
   /* TEXT HEADER */
+  /* MOBILE */
 }
 header nav {
   /* animation: animacao-nav 2s 0s 1; */
@@ -108,7 +115,7 @@ header #text-bg h1.top-line {
   letter-spacing: -3px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
   font-size: 5.3vw;
-  animation: typingAnimation 1s steps(40) 1s normal both;
+  animation: typingAnimation 1.6s steps(40) 1s normal both;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -118,7 +125,7 @@ header #text-bg h2.bottom-line {
   font-size: 2vw;
   margin-bottom: 1.9vw;
   display: block;
-  animation: typingAnimation 1s steps(40) 2s normal both;
+  animation: typingAnimation 1.6s steps(40) 1.9s normal both;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -189,33 +196,40 @@ header .coding-animate {
   header nav label[for=btmenu] {
     display: block;
   }
-  header #text-bg {
+  header .content-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding-top: 40vw;
+  }
+  header .content-header #text-bg {
     position: relative;
-    top: 80vw;
+    top: 0;
     left: 0;
     width: 100%;
     text-align: center;
   }
-  header #text-bg h1.top-line {
+  header .content-header #text-bg h1.top-line {
     font-size: 11vw;
     animation: none;
     margin: 5vw 0;
   }
-  header #text-bg h2.bottom-line {
+  header .content-header #text-bg h2.bottom-line {
     font-size: 5vw;
     animation: none;
     margin-bottom: 10vw;
   }
-  header #text-bg .linkedin-bt {
+  header .content-header #text-bg .linkedin-bt {
     padding: 4vw 7vw;
     font-size: 4vw;
     animation: none;
     opacity: 1;
   }
-  header .coding-animate {
+  header .content-header .coding-animate {
     margin: auto;
+    position: relative;
     left: 0;
-    top: 20vw;
+    top: 0;
     width: 70vw;
     height: 70vw;
   }
@@ -242,6 +256,7 @@ header .coding-animate {
   height: 85vh;
   margin: auto;
   padding-top: 5vw;
+  /* MOBILE */
 }
 #sobre .desc {
   text-align: center;
@@ -258,6 +273,23 @@ header .coding-animate {
 #sobre p {
   font-size: 1.06vw;
 }
+@media (max-width:1023px) {
+  #sobre {
+    width: 100%;
+    height: 75vh;
+    padding-top: 13vw;
+  }
+  #sobre .desc {
+    width: 100%;
+  }
+  #sobre img {
+    width: 30vw;
+  }
+  #sobre p {
+    font-size: 4.3vw;
+    padding: 2vw 5vw;
+  }
+}
 
 #skills {
   background-color: #ddd;
@@ -265,8 +297,9 @@ header .coding-animate {
   height: 100vh;
   background-attachment: fixed;
   background: url(../img/bgbody4.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding-top: 10vw;
+  /* MOBILE */
 }
 #skills .block-title {
   color: #eee;
@@ -326,6 +359,26 @@ header .coding-animate {
 #skills .skill-block__item:hover img {
   filter: grayscale(0);
 }
+@media (max-width:1023px) {
+  #skills .skill-block {
+    width: 75%;
+  }
+  #skills .skill-block__item {
+    width: 30vw;
+    border-radius: 4vw 4vw 0 4vw;
+    margin: 4vw 0;
+  }
+  #skills .skill-block__item h3 {
+    font-size: 4vw;
+    margin-top: 3vw;
+  }
+  #skills .skill-block__item img {
+    padding: 3vw 6vw;
+  }
+  #skills .skill-block__item:hover {
+    transform: scale(1.08);
+  }
+}
 
 #portfolio {
   text-align: center;
@@ -334,6 +387,7 @@ header .coding-animate {
   color: rgba(0, 0, 0, 0.7);
   background: #eee;
   padding-top: 3vw;
+  /* MOBILE */
 }
 #portfolio .box {
   display: flex;
@@ -356,7 +410,7 @@ header .coding-animate {
 }
 #portfolio .box__item img {
   width: 100%;
-  transform: scale(1.15);
+  transform: scale(1.13);
   transition: 0.3s ease-in;
 }
 #portfolio .box__item .intro {
@@ -381,6 +435,13 @@ header .coding-animate {
 }
 #portfolio .box__item:hover .intro {
   top: 70%;
+}
+@media (max-width:1023px) {
+  #portfolio .box__item {
+    width: 80vw;
+    height: 47vw;
+    margin: 5vw 0;
+  }
 }
 
 /* CONTATO */
@@ -424,30 +485,6 @@ footer {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 767px) {
-  /* SOBRE, PORTFOLIO, CONTATO */
-  #sobre {
-    height: 640px;
-    width: auto;
-  }
-  #sobre h1 {
-    padding-top: 40px;
-    font-size: 35px;
-  }
-  #sobre h2 {
-    font-size: 25px;
-  }
-  #portfolio {
-    height: auto;
-  }
-  #portfolio h1 {
-    padding-top: 40px;
-    padding-bottom: 30px;
-  }
-  #contato h1 {
-    font-size: 38px;
-  }
-}
 @media screen and (min-width: 768px) {
   h1#logo a {
     left: 10px;
