@@ -1,3 +1,13 @@
+//Menu Mobile
+var btMobile = document.getElementById('bt-menu');
+
+function toggleMenu() {
+	var menu = document.getElementById('menu')
+	menu.classList.toggle('active');
+}
+
+btMobile.addEventListener('click', toggleMenu);
+
 // Scroll suave
 $('nav .menu').click(function(e){
 	e.preventDefault();
