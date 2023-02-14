@@ -8,6 +8,16 @@ function toggleMenu() {
 
 btMobile.addEventListener('click', toggleMenu);
 
+//Bg Anime
+$(document).ready(function(){
+	$('.coding-animate').tilt({
+		glare: true,
+		maxGlare: .8,
+		scale : 1.02,
+		speed: 900
+	})
+})
+
 // Scroll suave
 $('nav .menu').click(function(e){
 	e.preventDefault();

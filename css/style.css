@@ -66,30 +66,41 @@ header .top-header #logo a {
 header .top-header .out {
   color: #eee;
 }
-header .top-header #bt-menu {
+header .top-header #menu #bt-menu {
   display: none;
 }
-header .top-header ul {
+header .top-header #menu ul {
   margin: 2vw;
   position: absolute;
 }
-header .top-header ul li {
+header .top-header #menu li {
   display: inline-block;
-  padding-right: 0.7vw;
+  padding-right: 0.9vw;
 }
-header .top-header ul li a {
+header .top-header #menu a.menu {
   text-transform: uppercase;
   border-radius: 7px;
   font-size: 0.8vw;
-  padding: 0.7vw;
+  padding: 0.6vw;
   text-decoration: none;
   color: #eee;
+  position: relative;
 }
-header .top-header ul li a.menu:hover {
-  color: white;
-  background: #1E90FF;
-  border-radius: 7px;
-  transition: all 0.6s;
+header .top-header #menu a.menu::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1E90FF;
+  transition: 0.4s;
+}
+header .top-header #menu a.menu:hover::after {
+  width: 100%;
+}
+header .top-header #menu a.menu:hover {
+  color: #fff;
 }
 header #text-bg {
   top: 17vw;
@@ -179,36 +190,26 @@ header .coding-animate {
     font-size: 6vw;
     margin: 6vw;
   }
-  header .top-header #bt-menu {
+  header .top-header #menu #bt-menu {
     margin: 8vw;
     display: block;
     border: none;
     background: none;
   }
-  header .top-header #bt-menu .hamburguer {
-    border-top: 3px solid #eee;
+  header .top-header #menu #bt-menu .hamburguer {
+    border-top: 2px solid #eee;
     width: 25px;
     display: inline-block;
   }
-  header .top-header #bt-menu .hamburguer::before, header .top-header #bt-menu .hamburguer::after {
+  header .top-header #menu #bt-menu .hamburguer::before, header .top-header #menu #bt-menu .hamburguer::after {
     content: "";
     display: block;
     width: 25px;
-    height: 3px;
+    height: 2px;
     margin-top: 5px;
     background-color: #eee;
     position: relative;
     transition: 0.4s;
-  }
-  header .top-header #menu.active .hamburguer {
-    border-top: none;
-  }
-  header .top-header #menu.active .hamburguer::before {
-    transform: rotate(135deg);
-  }
-  header .top-header #menu.active .hamburguer::after {
-    transform: rotate(-135deg);
-    top: -8px;
   }
   header .top-header #menu ul {
     width: 50%;
@@ -227,8 +228,19 @@ header .coding-animate {
   header .top-header #menu ul li:last-child {
     border-bottom: none;
   }
-  header .top-header #menu ul li a {
-    font-size: 3vw;
+  header .top-header #menu ul li a.menu {
+    font-size: 3.3vw;
+    padding: 2vw;
+  }
+  header .top-header #menu.active #bt-menu .hamburguer {
+    border-top: none;
+  }
+  header .top-header #menu.active #bt-menu .hamburguer::before {
+    transform: rotate(135deg);
+  }
+  header .top-header #menu.active #bt-menu .hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
   }
   header .top-header #menu.active ul {
     right: 0;
@@ -297,7 +309,6 @@ header .coding-animate {
 @media (max-width:1023px) {
   #sobre {
     width: 100%;
-    height: 75vh;
     padding-top: 13vw;
   }
   #sobre .desc {
@@ -503,6 +514,13 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 1vw;
+  /* MOBILE */
+}
+@media (max-width:1023px) {
+  footer {
+    height: 13vw;
+    font-size: 3.5vw;
+  }
 }
 
 /* MEDIA QUERIES */

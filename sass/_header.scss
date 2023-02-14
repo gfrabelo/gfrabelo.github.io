@@ -31,36 +31,51 @@ header{
         }
 
         /* MENU */
-        #bt-menu{
-            display: none;
+        #menu {
+            #bt-menu{
+                display: none;
+            }        
+    
+            ul {
+                margin: 2vw;
+                position: absolute;
+            }
+            
+            li {
+                display: inline-block;
+                padding-right: .9vw;
+            }
+            
+             a.menu{
+                text-transform: uppercase;
+                border-radius: 7px;
+                font-size: .8vw;
+                padding: .6vw;
+                text-decoration: none;
+                color: $white;
+                position: relative;
+            }
+    
+            a.menu::after {
+                content: '';
+                position: absolute;
+                height: 3px;
+                width: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $primaryColor;
+                transition: .4s;
+            }
+            
+            a.menu:hover::after{
+                width: 100%;
+            }
+            
+            a.menu:hover {
+                color: #fff;
+            }
         }
         
-
-        ul {
-            margin: 2vw;
-            position: absolute;
-        }
-        
-         ul li{
-            display: inline-block;
-            padding-right: .7vw;
-        }
-        
-         ul li a{
-            text-transform: uppercase;
-            border-radius: 7px;
-            font-size: .8vw;
-            padding: .7vw;
-            text-decoration: none;
-            color: $white;
-        }
-        
-         ul li a.menu:hover{
-            color: white;
-            background: $primaryColor;
-            border-radius: 7px;
-            transition: all .6s;
-        }
     }
 
     /* TEXT HEADER */
@@ -165,60 +180,65 @@ header{
                 font-size: 6vw;
                 margin: 6vw;
             }
-            #bt-menu {
-                margin: 8vw;
-                display: block;
-                border: none;
-                background: none;
-                .hamburguer {
-                    border-top: 3px solid $white;
-                    width: 25px;
-                    display: inline-block;
-                }
-                .hamburguer::before, .hamburguer::after {
-                    content: '';
+            #menu {
+                #bt-menu {
+                    margin: 8vw;
                     display: block;
-                    width: 25px;
-                    height: 3px;
-                    margin-top: 5px;
-                    background-color: $white;
-                    position: relative;
-                    transition: .4s;
+                    border: none;
+                    background: none;
+                    .hamburguer {
+                        border-top: 2px solid $white;
+                        width: 25px;
+                        display: inline-block;
+                    }
+                    .hamburguer::before, .hamburguer::after {
+                        content: '';
+                        display: block;
+                        width: 25px;
+                        height: 2px;
+                        margin-top: 5px;
+                        background-color: $white;
+                        position: relative;
+                        transition: .4s;
+                    }
+                }
+                ul{
+                    width: 50%;
+                    transition: all .4s;
+                    background: rgba(0,0,0,.9);
+                    top: 20vw;
+                    right: -50vw;
+                    transition: .3s;
+                    margin: 0;
+                }
+        
+                ul li{	
+                    padding: 5vw 8vw;
+                    display: block;
+                    border-bottom: 2px solid $grey;
+                }
+    
+                ul li:last-child {
+                    border-bottom: none;
+                }
+    
+                ul li a.menu {
+                    font-size: 3.3vw;
+                    padding: 2vw;
                 }
             }
-            #menu.active .hamburguer {
+            
+            #menu.active #bt-menu .hamburguer {
                 border-top: none;
             }
-            #menu.active .hamburguer::before {
+            #menu.active #bt-menu .hamburguer::before {
                 transform: rotate(135deg);
             }
-            #menu.active .hamburguer::after {
+            #menu.active #bt-menu .hamburguer::after {
                 transform: rotate(-135deg);
-                top: -8px;
+                top: -7px;
             }
-            #menu ul{
-                width: 50%;
-                transition: all .4s;
-                background: rgba(0,0,0,.9);
-                top: 20vw;
-                right: -50vw;
-                transition: .3s;
-                margin: 0;
-            }
-    
-            #menu ul li{	
-                padding: 5vw 8vw;
-                display: block;
-                border-bottom: 2px solid $grey;
-            }
-
-            #menu ul li:last-child {
-                border-bottom: none;
-            }
-
-            #menu ul li a {
-                font-size: 3vw;
-            }
+            
 
             #menu.active ul {
                 right: 0;
@@ -263,11 +283,6 @@ header{
                 height: 70vw;
             }
         }
-
-        
-
-        
-
     }
 }
 
