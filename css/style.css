@@ -331,7 +331,6 @@ header .coding-animate {
   background: url(../img/bgbody4.png) no-repeat;
   background-size: cover;
   padding-top: 10vw;
-  /* MOBILE */
 }
 #skills .block-title {
   color: #eee;
@@ -383,6 +382,7 @@ header .coding-animate {
   cursor: pointer;
   transform: scale(1.04);
   box-shadow: 0 0 1vw rgba(0, 0, 0, 0.6);
+  background-color: #fff;
   transition: all 0.2s ease-in;
 }
 #skills .skill-block__item:hover h3 {
@@ -391,9 +391,14 @@ header .coding-animate {
 #skills .skill-block__item:hover img {
   filter: grayscale(0);
 }
+
+/* MOBILE */
 @media (max-width:1023px) {
+  #skills {
+    height: auto;
+  }
   #skills .skill-block {
-    width: 75%;
+    width: 75vw;
   }
   #skills .skill-block__item {
     width: 30vw;
@@ -411,7 +416,6 @@ header .coding-animate {
     transform: scale(1.08);
   }
 }
-
 #portfolio {
   text-align: center;
   width: 100%;

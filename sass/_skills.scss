@@ -63,7 +63,7 @@
             cursor: pointer;
             transform: scale(1.04);
             box-shadow: 0 0 1vw rgba(0,0,0,.6);
-            
+            background-color: #fff;
 	        transition: all .2s ease-in;
             h3 {
                 color: $primaryColor;
@@ -74,10 +74,15 @@
         }
 
     }
-    /* MOBILE */
-	@media #{$mediamobile} {
-		.skill-block {
-            width: 75%;
+    
+}
+
+/* MOBILE */
+@media #{$mediamobile} {
+    #skills {
+        height: auto;
+        .skill-block {
+            width: 75vw;
             &__item {
                 width: 30vw;
                 border-radius: 4vw 4vw 0 4vw;
@@ -94,5 +99,6 @@
                 transform: scale(1.08);
             }
         }
-	}
+    }
+    
 }
