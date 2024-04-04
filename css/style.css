@@ -64,7 +64,7 @@ header .top-header #logo a {
   font-size: 2vw;
 }
 header .top-header .out {
-  color: #eee;
+  color: #fff;
 }
 header .top-header #menu #bt-menu {
   display: none;
@@ -83,7 +83,7 @@ header .top-header #menu a.menu {
   font-size: 0.8vw;
   padding: 0.6vw;
   text-decoration: none;
-  color: #eee;
+  color: #fff;
   position: relative;
 }
 header .top-header #menu a.menu::after {
@@ -118,7 +118,7 @@ header #text-bg h1.top-line {
   white-space: nowrap;
 }
 header #text-bg h2.bottom-line {
-  color: #eee;
+  color: #fff;
   font-weight: 700;
   font-size: 2vw;
   margin-bottom: 1.9vw;
@@ -157,7 +157,7 @@ header #text-bg .linkedin-bt:hover {
 }
 @keyframes blinkCursor {
   from {
-    border-right-color: #eee;
+    border-right-color: #fff;
   }
   to {
     border-right-color: transparent;
@@ -197,7 +197,7 @@ header .coding-animate {
     background: none;
   }
   header .top-header #menu #bt-menu .hamburguer {
-    border-top: 2px solid #eee;
+    border-top: 2px solid #fff;
     width: 25px;
     display: inline-block;
   }
@@ -207,7 +207,7 @@ header .coding-animate {
     width: 25px;
     height: 2px;
     margin-top: 5px;
-    background-color: #eee;
+    background-color: #fff;
     position: relative;
     transition: 0.4s;
   }
@@ -333,7 +333,7 @@ header .coding-animate {
   padding-top: 10vw;
 }
 #skills .block-title {
-  color: #eee;
+  color: #fff;
 }
 #skills .skill-block {
   margin: auto;
@@ -344,9 +344,9 @@ header .coding-animate {
 }
 #skills .skill-block__item {
   width: 8vw;
-  border: 1px solid #eee;
+  border: 1px solid #fff;
   margin: 0.6vw 0;
-  background-color: #eee;
+  background-color: #fff;
   border-radius: 1vw 1vw 0 1vw;
 }
 #skills .skill-block__item h3 {
@@ -370,7 +370,7 @@ header .coding-animate {
   color: #ffdf00;
 }
 #skills .skill-block__item:hover:nth-child(5) h3 {
-  color: #00cfdd;
+  color: #E53F3B;
 }
 #skills .skill-block__item:hover:nth-child(7) h3 {
   color: #5c6bc0;
@@ -421,7 +421,7 @@ header .coding-animate {
   width: 100%;
   height: auto;
   color: rgba(0, 0, 0, 0.7);
-  background: #eee;
+  background: #fff;
   padding-top: 3vw;
   /* MOBILE */
 }
