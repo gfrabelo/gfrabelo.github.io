@@ -12,7 +12,7 @@
     .skill-block {
         margin: auto;
         display: flex;
-        width: 35vw;
+        width: 46vw;
         flex-wrap: wrap;
         justify-content: space-between;
         
@@ -35,29 +35,29 @@
             }
         }
 
-        &__item:hover:nth-child(1) h3 {
-            color: $html;
-        }
+        // &__item:hover:nth-child(1) h3 {
+        //     color: $html;
+        // }
 
-        &__item:hover:nth-child(3) h3 {
-            color: $sass;
-        }
+        // &__item:hover:nth-child(3) h3 {
+        //     color: $sass;
+        // }
 
-        &__item:hover:nth-child(4) h3 {
-            color: $javascript;
-        }
+        // &__item:hover:nth-child(4) h3 {
+        //     color: $javascript;
+        // }
 
-        &__item:hover:nth-child(5) h3 {
-            color: $angular;
-        }
+        // &__item:hover:nth-child(5) h3 {
+        //     color: $angular;
+        // }
 
-        &__item:hover:nth-child(7) h3 {
-            color: $github;
-        }
+        // &__item:hover:nth-child(7) h3 {
+        //     color: $github;
+        // }
 
-        &__item:hover:nth-child(8) h3 {
-            color: $figma;
-        }
+        // &__item:hover:nth-child(8) h3 {
+        //     color: $figma;
+        // }
 
         &__item:hover {
             cursor: pointer;
@@ -66,7 +66,7 @@
             background-color: #fff;
 	        transition: all .2s ease-in;
             h3 {
-                color: $primaryColor;
+                color: $secundaryColor;
             }
             img {
                 filter: grayscale(0);

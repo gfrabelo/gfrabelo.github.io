@@ -338,7 +338,7 @@ header .coding-animate {
 #skills .skill-block {
   margin: auto;
   display: flex;
-  width: 35vw;
+  width: 46vw;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -360,24 +360,6 @@ header .coding-animate {
   padding: 1vw 2vw;
   filter: grayscale(0.9);
 }
-#skills .skill-block__item:hover:nth-child(1) h3 {
-  color: #ff7816;
-}
-#skills .skill-block__item:hover:nth-child(3) h3 {
-  color: #cd6699;
-}
-#skills .skill-block__item:hover:nth-child(4) h3 {
-  color: #ffdf00;
-}
-#skills .skill-block__item:hover:nth-child(5) h3 {
-  color: #E53F3B;
-}
-#skills .skill-block__item:hover:nth-child(7) h3 {
-  color: #5c6bc0;
-}
-#skills .skill-block__item:hover:nth-child(8) h3 {
-  color: #3747d6;
-}
 #skills .skill-block__item:hover {
   cursor: pointer;
   transform: scale(1.04);
@@ -386,7 +368,7 @@ header .coding-animate {
   transition: all 0.2s ease-in;
 }
 #skills .skill-block__item:hover h3 {
-  color: #1E90FF;
+  color: rgba(0, 0, 0, 0.7);
 }
 #skills .skill-block__item:hover img {
   filter: grayscale(0);
