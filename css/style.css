@@ -490,6 +490,15 @@ header .coding-animate {
   font-weight: 800;
 }
 
+#contato a {
+  text-decoration: none;
+}
+
+#contato i {
+  font-size: 45px;
+  margin: 0 10px;
+}
+
 /* RODAPE */
 footer {
   color: rgba(0, 0, 0, 0.7);
