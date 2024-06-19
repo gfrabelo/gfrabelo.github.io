@@ -348,11 +348,9 @@ header .coding-animate {
 }
 
 #skills {
-  background-color: #ddd;
-  width: 100%;
+  width: auto;
   height: 100vh;
-  background-attachment: fixed;
-  background: url(../img/bgbody4.png) no-repeat;
+  background-image: url(../img/bgbody4.png);
   background-size: cover;
   padding-top: 10vw;
 }
