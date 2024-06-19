@@ -20,6 +20,30 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
+.arrow-top {
+  position: fixed;
+  width: 2.4vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  bottom: 2vw;
+  right: 2vw;
+  padding: 0.3vw;
+  z-index: 999;
+  cursor: pointer;
+  transition: 0.4s all;
+  border-radius: 0.2vw;
+  font-weight: bold;
+}
+
+.arrow-top a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.arrow-top:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 h2.block-title {
   padding: 1.6vw 0;
   font-size: 2vw;
