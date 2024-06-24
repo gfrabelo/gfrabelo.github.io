@@ -19,7 +19,7 @@ $(document).ready(function(){
 })
 
 // Scroll suave
-$('nav .menu').click(function(e){
+$('.menu').click(function(e){
 	e.preventDefault();
 	var id = $(this).attr('href'),
 	menuHeight = $('nav').innerHeight(),
