@@ -51,6 +51,11 @@ body {
 	transition: .4s all;
 	border-radius: .2vw;
 	font-weight: bold;
+	@media #{$mediamobile} {
+		width: 9vw;
+		padding: 1.2vw;
+		border-radius: 1vw;
+	}
 }
 
 .arrow-top a {
