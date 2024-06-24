@@ -352,6 +352,7 @@ header .coding-animate {
   height: 100vh;
   background-image: url(../img/bgbody4.png);
   background-size: cover;
+  background-attachment: fixed;
   padding-top: 10vw;
 }
 #skills .block-title {
