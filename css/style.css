@@ -28,7 +28,7 @@ body {
   bottom: 2vw;
   right: 2vw;
   padding: 0.3vw;
-  z-index: 999;
+  z-index: 8;
   cursor: pointer;
   transition: 0.4s all;
   border-radius: 0.2vw;
