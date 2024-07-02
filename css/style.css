@@ -341,7 +341,7 @@ header .coding-animate {
 @media (max-width:1023px) {
   #sobre {
     width: 100%;
-    padding-top: 13vw;
+    padding: 13vw 0;
   }
   #sobre .desc {
     width: 100%;
