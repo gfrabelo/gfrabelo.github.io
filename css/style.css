@@ -391,7 +391,7 @@ header .coding-animate {
 #skills .skill-block__item img {
   width: 100%;
   padding: 1vw 2vw;
-  filter: grayscale(0.9);
+  filter: grayscale(0.5);
 }
 #skills .skill-block__item:hover {
   cursor: pointer;
