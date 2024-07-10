@@ -18,6 +18,15 @@ $(document).ready(function(){
 	})
 })
 
+// Fade Scroll Top
+$(window).scroll(function(){
+	if($(this).scrollTop() > 40 ) {
+		$('.arrow-top').fadeIn();
+	} else {
+		$('.arrow-top').fadeOut();
+	}
+})
+
 // Scroll suave
 $('.menu').click(function(e){
 	e.preventDefault();
