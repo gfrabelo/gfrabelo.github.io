@@ -33,6 +33,7 @@ body {
   transition: 0.4s all;
   border-radius: 0.2vw;
   font-weight: bold;
+  display: none;
 }
 @media (max-width:1023px) {
   .arrow-top {
