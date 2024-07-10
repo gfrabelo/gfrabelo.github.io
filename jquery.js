@@ -36,7 +36,7 @@ $('.menu').click(function(e){
 	$('html, body').animate({
 		scrollTop: targetOffset - menuHeight
 	}, 500);
-});
+})
 
 // Debounce do Lodash
 debounce = function(func, wait, immediate) {
