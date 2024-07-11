@@ -180,7 +180,7 @@ header #text-bg .linkedin-bt:hover {
   background: rgba(0, 0, 0, 0.9);
   text-shadow: 1px 1px 2px #1E90FF;
   transition: all 0.3s ease-in-out;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
 }
 @keyframes typingAnimation {
   from {
