@@ -175,6 +175,7 @@ header{
     
     /* MOBILE */
     @media #{$mediamobile} {
+        height: 100dvh;
         .top-header {
             height: 20vw;
             #logo a {

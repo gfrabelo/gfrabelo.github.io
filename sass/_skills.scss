@@ -78,6 +78,7 @@
 /* MOBILE */
 @media #{$mediamobile} {
     #skills {
+        min-height: 100dvh;
         height: auto;
         .skill-block {
             width: 75vw;
