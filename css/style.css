@@ -503,6 +503,9 @@ header .coding-animate {
     height: 47vw;
     margin: 5vw 0;
   }
+  #portfolio .box__item .intro h3 {
+    font-size: 3.6vw;
+  }
 }
 
 /* CONTATO */
