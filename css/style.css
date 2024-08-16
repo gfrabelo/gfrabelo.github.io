@@ -420,6 +420,7 @@ header .coding-animate {
   #skills {
     min-height: 100dvh;
     height: auto;
+    background-attachment: scroll;
   }
   #skills .skill-block {
     width: 75vw;
