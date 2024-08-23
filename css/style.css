@@ -517,31 +517,37 @@ header .coding-animate {
   height: 441px;
   color: rgba(0, 0, 0, 0.7);
 }
-
 #contato h1 {
   padding-bottom: 40px;
   font-size: 50px;
   letter-spacing: -1px;
 }
-
 #contato p {
   font-size: 17px;
   margin-bottom: 6px;
   color: rgba(0, 0, 0, 0.6);
   padding: 0 5vw;
 }
-
-#contato p.bolder {
+#contato .bolder {
   margin-bottom: 10px;
   color: rgba(0, 0, 0, 0.7);
   font-size: 25px;
   font-weight: 800;
 }
-
 #contato a {
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
 }
-
+#contato .mailto {
+  background: url(../img/mail.png) no-repeat;
+  background-size: contain;
+  width: 1.5vw;
+  height: 1.5vw;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
 #contato i {
   font-size: 45px;
   margin: 0 10px;
