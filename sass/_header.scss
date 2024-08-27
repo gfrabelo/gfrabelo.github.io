@@ -257,6 +257,15 @@ header{
                     font-size: 3.3vw;
                     padding: 2vw;
                 }
+
+                .language-bt {
+                    width: 24vw;
+                    position: absolute;
+                    left: 0;
+                    .flag {
+                        height: 7vw;
+                    }
+                }
             }
             
             #menu.active #bt-menu .hamburguer {

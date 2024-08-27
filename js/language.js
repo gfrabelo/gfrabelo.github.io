@@ -4,7 +4,10 @@ const buttons = document.querySelectorAll('.flag');
 // Text Changes
 const mainTitle = document.querySelector('.top-line');
 const subTitle = document.querySelector('.bottom-line');
+const teste = document.querySelectorAll('.menu');
+console.log (teste);
 
+// Chance Language on Click
 buttons.forEach( button => {
     button.addEventListener('click', () => {
         langBt.querySelector('.active').classList.remove('active');
@@ -17,6 +20,7 @@ buttons.forEach( button => {
     });
 });
 
+// All Texts
 const data = {
     'brazil': {
         'title': 'Desenvolvedor Web',

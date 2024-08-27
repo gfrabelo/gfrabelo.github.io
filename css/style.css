@@ -299,6 +299,14 @@ header .coding-animate {
     font-size: 3.3vw;
     padding: 2vw;
   }
+  header .top-header #menu .language-bt {
+    width: 24vw;
+    position: absolute;
+    left: 0;
+  }
+  header .top-header #menu .language-bt .flag {
+    height: 7vw;
+  }
   header .top-header #menu.active #bt-menu .hamburguer {
     border-top: none;
   }
