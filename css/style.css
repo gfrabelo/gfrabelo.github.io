@@ -142,7 +142,6 @@ header .top-header #menu .language-bt {
   border-radius: 1vw;
   margin: 1.8vw;
   display: flex;
-  justify-content: space-between;
 }
 header .top-header #menu .language-bt .flag {
   background-color: transparent;
@@ -153,7 +152,7 @@ header .top-header #menu .language-bt .flag {
   width: 50%;
   height: 1.49vw;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.4s;
 }
 header .top-header #menu .language-bt .flag.active {
   background-color: #fff;

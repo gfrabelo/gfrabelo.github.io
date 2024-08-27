@@ -80,7 +80,6 @@ header{
                 border-radius: 1vw;
                 margin: 1.8vw;
                 display: flex;
-                justify-content: space-between;
                 .flag {
                     background-color: transparent;
                     background-repeat: no-repeat;
@@ -90,7 +89,7 @@ header{
                     width: 50%;
                     height: 1.49vw;                    
                     cursor: pointer;
-                    transition: 1s;
+                    transition: .4s;
                 }
                 .flag.active {
                     background-color: $white;
