@@ -153,6 +153,7 @@ header .top-header #menu .language-bt .flag {
   height: 1.49vw;
   cursor: pointer;
   transition: 0.4s;
+  font-size: 0;
 }
 header .top-header #menu .language-bt .flag.active {
   background-color: #fff;

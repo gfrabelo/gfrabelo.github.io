@@ -90,6 +90,7 @@ header{
                     height: 1.49vw;                    
                     cursor: pointer;
                     transition: .4s;
+                    font-size: 0;
                 }
                 .flag.active {
                     background-color: $white;

@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll('.flag');
 // Text Changes
 const mainTitle = document.querySelector('.top-line');
 const subTitle = document.querySelector('.bottom-line');
-const teste = document.querySelectorAll('.menu');
+const teste = document.querySelector('.pt-br');
 console.log (teste);
 
 // Chance Language on Click
@@ -13,7 +13,7 @@ buttons.forEach( button => {
         langBt.querySelector('.active').classList.remove('active');
         button.classList.add('active');
 
-        const attr = button.getAttribute('data');
+        const attr = button.getAttribute('language');
 
         mainTitle.textContent = data[attr].title;
         subTitle.textContent = data[attr].subtitle;
