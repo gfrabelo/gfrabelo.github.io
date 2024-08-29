@@ -552,7 +552,8 @@ header .coding-animate {
   text-align: center;
   width: 100%;
   margin: 3vw auto;
-  height: 441px;
+  height: auto;
+  min-height: 65vh;
   color: #3d3d3d;
 }
 #contato h1 {
