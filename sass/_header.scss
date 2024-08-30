@@ -75,9 +75,9 @@ header{
                 color: #fff;
             }
             .language-bt {
-                border: 1px solid $white;
+                background-color: rgba(213,206,194,.4);
                 width: 5.6vw;
-                border-radius: 1vw;
+                border-radius: .7vw;
                 margin: 1.8vw;
                 display: flex;
                 .flag {
@@ -97,11 +97,11 @@ header{
                 }
                 .pt-br {
                     background-image: url(../img/pt-br.png);
-                    border-radius: 1vw 0 0 1vw;                 
+                    border-radius: .7vw;                 
                 }
                 .en-us {
                     background-image: url(../img/en-us.png);
-                    border-radius: 0 1vw 1vw 0;
+                    border-radius: .7vw;
                 }
             }
         }
