@@ -152,7 +152,7 @@ header .top-header #menu .language-bt .flag {
   width: 50%;
   height: 1.49vw;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.4s all ease;
   font-size: 0;
 }
 header .top-header #menu .language-bt .flag.active {
@@ -206,7 +206,7 @@ header #text-bg .bt {
 header #text-bg .linkedin-bt {
   color: #fff;
   border: 2px solid #1E90FF;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   animation: btAnimation 1s 2.4s normal both;
 }
 header #text-bg .cv-bt {

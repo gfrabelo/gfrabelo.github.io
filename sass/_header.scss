@@ -89,7 +89,7 @@ header{
                     width: 50%;
                     height: 1.49vw;                    
                     cursor: pointer;
-                    transition: .4s;
+                    transition: .4s all ease;
                     font-size: 0;
                 }
                 .flag.active {
@@ -154,7 +154,7 @@ header{
         .linkedin-bt {           
             color: $white;
             border: 2px solid $primaryColor;            
-            background: rgba(0,0,0,.6);
+            background: rgba(0,0,0,.4);
             animation: btAnimation 1s 2.4s normal both;        
         }
 
