@@ -161,7 +161,7 @@ header{
             background-color: $white;
             color: $primaryColor;
             .download {
-                background-image: url(../img/download.png);
+                background: url(../img/download.png) no-repeat;
                 width: 1vw;
                 height: 1vw;
                 position: relative;
@@ -330,12 +330,18 @@ header{
                     animation: none;
                     margin-bottom: 10vw;
                 }
-                .linkedin-bt {
+                .bt {
                     padding: 4vw 7vw;
                     font-size: 4vw;
                     animation: none;
-                    opacity: 1;
+                    display: block;
                     width: 50vw;
+                    margin: 4vw auto;
+                    .download {
+                        width: 4vw;
+                        height: 4vw;
+                        margin-left: 2vw;
+                    }
                 }
             }
     
