@@ -199,18 +199,20 @@ header #text-bg .bt {
   text-align: center;
   font-size: 0.97vw;
   font-weight: bold;
-  animation: btAnimation 1s 2.4s normal both;
   padding: 0.86vw 1.66vw;
   margin-right: 1.6vw;
+  opacity: 0;
 }
 header #text-bg .linkedin-bt {
   color: #fff;
   border: 2px solid #1E90FF;
   background: rgba(0, 0, 0, 0.6);
+  animation: btAnimation 1s 2.4s normal both;
 }
 header #text-bg .cv-bt {
   background-color: #fff;
   color: #1E90FF;
+  animation: btAnimation 1s 2.6s normal both;
 }
 header #text-bg .cv-bt .download {
   background: url(../img/download.png) no-repeat;
