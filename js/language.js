@@ -13,14 +13,14 @@ const aboutTxtP2 = document.querySelector('.about-text-p2');
 const aboutTxtP3 = document.querySelector('.about-text-p3');
 const skillsTitle = document.querySelector('.skill-title');
 
-// Chance Language on Click
+// Change Language on Click
 buttons.forEach( button => {
     button.addEventListener('click', () => {
         langBt.querySelector('.active').classList.remove('active');
         button.classList.add('active');
-
+        // Get attribute Language
         const attr = button.getAttribute('language');
-
+        // Change text content by Array
         mainTitle.textContent = data[attr].title;
         subTitle.textContent = data[attr].subtitle;
         aboutNav.textContent = data[attr].about;
@@ -50,7 +50,7 @@ const data = {
     },
     'english': {
         'title': 'Web Developer',
-        'subtitle': 'Creating websites with mastery',
+        'subtitle': 'Creating websites with mastery!',
         'about': 'About',
         'skills': 'Skills',
         'contact': 'Contact',

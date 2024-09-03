@@ -271,7 +271,8 @@ header .coding-animate {
 }
 @media (max-width:1023px) {
   header {
-    height: 100dvh;
+    min-height: 100dvh;
+    height: auto;
   }
   header .top-header {
     height: 20vw;
@@ -325,7 +326,8 @@ header .coding-animate {
   header .top-header #menu .language-bt {
     width: 24vw;
     position: absolute;
-    left: 0;
+    right: 21vw;
+    top: 4.2vw;
   }
   header .top-header #menu .language-bt .flag {
     height: 7vw;
@@ -372,7 +374,9 @@ header .coding-animate {
     animation: none;
     display: block;
     width: 50vw;
+    border-radius: 2vw;
     margin: 4vw auto;
+    opacity: 1;
   }
   header .content-header #text-bg .bt .download {
     width: 4vw;
