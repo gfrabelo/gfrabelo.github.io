@@ -314,10 +314,7 @@ header .coding-animate {
   header .top-header #menu ul li {
     padding: 5vw 8vw;
     display: block;
-    border-bottom: 2px solid #ddd;
-  }
-  header .top-header #menu ul li:last-child {
-    border-bottom: none;
+    border-top: 2px solid #ddd;
   }
   header .top-header #menu ul li a.menu {
     font-size: 3.3vw;

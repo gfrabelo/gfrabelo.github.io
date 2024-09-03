@@ -273,11 +273,7 @@ header{
                 ul li{	
                     padding: 5vw 8vw;
                     display: block;
-                    border-bottom: 2px solid $grey;
-                }
-    
-                ul li:last-child {
-                    border-bottom: none;
+                    border-top: 2px solid $grey;
                 }
     
                 ul li a.menu {
