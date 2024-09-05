@@ -346,8 +346,15 @@ header{
                     }
                 }
             }
-    
+
             .coding-animate {
+                display: none;
+            }
+    
+            .coding-mobile {
+                background: url(../img/coding.png) no-repeat;
+                background-size: contain;
+                display: block;
                 margin: auto;
                 position: relative;
                 left: 0;
