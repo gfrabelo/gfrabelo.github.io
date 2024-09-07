@@ -34,17 +34,44 @@
 	.mailto {
 		background: url(../img/email.svg) no-repeat;
 		background-size: contain;
-		width: 28px;
-		height: 28px;
-		display: inline-block;
+		width: 25px;
+		height: 25px;
 		position: relative;
-		top: 8px;
-		right: 10px;
+		top: 4px;
 	}
 	
 	i {
-		font-size: 45px;
+		font-size: 25px;
 		margin: 0 10px;
+	}
+	.wrapper {
+		display: inline-block;
+		text-align: left;
+		.button {
+			width: 60px;
+			height: 60px;
+			border-radius: 60px;
+			margin: 0 8px;
+			padding: 0 8px;
+			cursor: pointer;
+			box-shadow: 0 0 10px rgba(0,0,0,.2);
+			overflow: hidden;
+			line-height: 65px;
+			display: inline-block;		
+			transition: .5s all ease-in-out;
+			@media #{$mediamobile} {
+				width: 180px;
+				margin: 15px auto;
+				display: block;
+			}
+			.icon {
+				display: inline-block;
+			}
+		}
+		.button:hover {
+			width: 180px;
+			background-color: rgba(102, 102, 102, 0.1);
+		}
 	}
 }
 
