@@ -12,11 +12,12 @@
 		letter-spacing: -1px;
 	}
 	
-	p{
-		font-size: 17px;
-		margin-bottom: 6px;
+	p.contact-text{
+		font-size: 20px;
 		color: $secundaryColor;
 		padding: 0 5vw;
+		width: 800px;
+		margin: 12px auto;
 	}
 	
 	.bolder{

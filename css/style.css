@@ -596,11 +596,12 @@ header .coding-animate {
   font-size: 50px;
   letter-spacing: -1px;
 }
-#contato p {
-  font-size: 17px;
-  margin-bottom: 6px;
+#contato p.contact-text {
+  font-size: 20px;
   color: #3d3d3d;
   padding: 0 5vw;
+  width: 800px;
+  margin: 12px auto;
 }
 #contato .bolder {
   margin-bottom: 10px;
