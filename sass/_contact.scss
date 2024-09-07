@@ -19,9 +19,8 @@
 		width: 800px;
 		margin: 12px auto;
 		@media #{$mediamobile} {
-			width: 200px;
+			width: 300px;
 			text-align: center;
-			margin: 0;
 			font-size: 16px;
 		}
 	}

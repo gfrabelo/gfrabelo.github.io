@@ -605,9 +605,8 @@ header .coding-animate {
 }
 @media (max-width:1023px) {
   #contato p.contact-text {
-    width: 200px;
+    width: 300px;
     text-align: center;
-    margin: 0;
     font-size: 16px;
   }
 }
