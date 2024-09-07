@@ -603,6 +603,13 @@ header .coding-animate {
   width: 800px;
   margin: 12px auto;
 }
+@media (max-width:1023px) {
+  #contato p.contact-text {
+    width: auto;
+    text-align: center;
+    margin: 0;
+  }
+}
 #contato .bolder {
   margin-bottom: 10px;
   color: #3d3d3d;
