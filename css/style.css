@@ -129,6 +129,7 @@ header .top-header #menu a.menu::after {
   left: 0;
   background-color: #1E90FF;
   transition: 0.4s;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }
 header .top-header #menu a.menu:hover::after {
   width: 100%;
@@ -325,9 +326,17 @@ header .coding-animate {
     position: absolute;
     right: 21vw;
     top: 4.2vw;
+    border-radius: 4vw;
   }
   header .top-header #menu .language-bt .flag {
     height: 7vw;
+  }
+  header .top-header #menu .language-bt .pt-br {
+    border-radius: 4vw;
+  }
+  header .top-header #menu .language-bt .en-us {
+    background-image: url(../img/en-us.png);
+    border-radius: 4vw;
   }
   header .top-header #menu.active #bt-menu .hamburguer {
     border-top: none;

@@ -65,6 +65,7 @@ header{
                 left: 0;
                 background-color: $primaryColor;
                 transition: .4s;
+                transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
             }
             
             a.menu:hover::after{
@@ -286,8 +287,16 @@ header{
                     position: absolute;
                     right: 21vw;
                     top: 4.2vw;
+                    border-radius: 4vw;
                     .flag {
                         height: 7vw;
+                    }
+                    .pt-br {
+                        border-radius: 4vw;                 
+                    }
+                    .en-us {
+                        background-image: url(../img/en-us.png);
+                        border-radius: 4vw;
                     }
                 }
             }
