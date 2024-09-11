@@ -656,7 +656,7 @@ header .coding-animate {
   overflow: hidden;
   line-height: 65px;
   display: inline-block;
-  transition: 0.5s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 @media (max-width:1023px) {
   #contato .wrapper .button {
