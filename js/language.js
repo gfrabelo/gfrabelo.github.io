@@ -34,7 +34,6 @@ buttons.forEach(button => {
         updateTextContent(button.getAttribute('language'));
     });
 });
- 
 
 // All Texts
 const data = {
