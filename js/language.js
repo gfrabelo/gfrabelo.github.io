@@ -62,7 +62,7 @@ const data = {
         'aboutTxt2':'I’ve had the opportunity to work on projects for renowned companies like Nike, Jequiti, and Crackle. In addition to my corporate experience, I have also worked as a freelance developer, creating Landing Pages and Websites with high conversion rates.',
         'aboutTxt3':'I am always eager to learn more because the world of technology offers infinite possibilities for creation. I have fun doing it and strive to build software that provides great experiences for my future clients!',
         'skillsTitle': 'Skills',
-        'contactTitle': 'Get in touch',
+        'contactTitle': 'Contact me',
         'contactText': "Did you like what you saw? Let's work together! Feel free to get in touch with me:"
     }
 }
