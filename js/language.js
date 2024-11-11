@@ -39,7 +39,7 @@ buttons.forEach(button => {
 const data = {
     'brazil': {
         'mainTitle': 'Desenvolvedor Web',
-        'subTitle': 'Criando sites com maestria!',
+        'subTitle': 'Criando software com excelência!',
         'aboutNav': 'Sobre',
         'skillsNav': 'Habilidades',
         'contactNav': 'Contato',
@@ -53,7 +53,7 @@ const data = {
     },
     'english': {
         'mainTitle': 'Web Developer',
-        'subTitle': 'Creating websites with mastery!',
+        'subTitle': 'Creating software with mastery!',
         'aboutNav': 'About',
         'skillsNav': 'Skills',
         'contactNav': 'Contact',
