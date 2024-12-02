@@ -427,6 +427,7 @@ header .coding-animate {
 }
 #sobre p {
   font-size: 1.06vw;
+  margin-bottom: 0.7vw;
 }
 @media (max-width:1023px) {
   #sobre {
