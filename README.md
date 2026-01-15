@@ -2,13 +2,13 @@
 
 **Full-Stack Engineer & AI Specialist**
 
-Transformo ideias em produtos escalaveis usando IA, automacao e as melhores praticas de engenharia.
+Transformo ideias em produtos escalaveis usando IA, automação e as melhores praticas de engenharia.
 
 ---
 
 ## Sobre
 
-Desenvolvedor Full-Stack com **8+ anos de experiencia** construindo produtos digitais de alto impacto. Atualmente na **ANBIMA**, onde ja entreguei +120 merge requests em sistemas criticos de certificacoes financeiras.
+Desenvolvedor Full-Stack com **8+ anos de experiencia** construindo produtos digitais de alto impacto. Atualmente na **ANBIMA**, onde ja entreguei +120 merge requests em sistemas criticos de certificações financeiras.
 
 Nao sou apenas um executor de tarefas - sou um **engenheiro de produtos completo** que pensa em modelos de negocio, arquitetura e experiencia do usuario. Como **AI Builder**, uso LLMs de ponta para entregar velocidade sem sacrificar qualidade.
 
@@ -23,7 +23,7 @@ Nao sou apenas um executor de tarefas - sou um **engenheiro de produtos completo
 - LLMs, Fine-tuning, RAG, Prompt Engineering
 
 **Automacao**
-- N8N, Webhooks, Integracoes WhatsApp
+- N8N, Webhooks, Integrações WhatsApp
 
 **UI/UX**
 - Figma, Design Systems, Component Driven Development
@@ -36,7 +36,7 @@ Nao sou apenas um executor de tarefas - sou um **engenheiro de produtos completo
 ## Experiencia
 
 ### ANBIMA (2024-2026)
-**Full-Stack Engineer** | Certificacoes Financeiras
+**Full-Stack Engineer** | Certificações Financeiras
 
 - +120 MRs entregues em producao
 - Integracao Adyen (gateway de pagamento)
@@ -48,14 +48,14 @@ Nao sou apenas um executor de tarefas - sou um **engenheiro de produtos completo
 
 - Nike Membership (programa de fidelidade)
 - Central de Uniformes (plataforma B2B)
-- Cartao Presente (gift cards digitais)
+- Cartão Presente (gift cards digitais)
 - Quiz interativo "Encontre seu Tenis"
 
 ### Jequiti Cosmeticos (2019-2020)
 **Front-End Developer** | Campanhas Digitais
 
 - Landing pages de alto impacto
-- Promocoes com influencers (Carlinhos Maia, Eliana)
+- Promoções com influencers (Carlinhos Maia, Eliana)
 - Alta taxa de conversao
 
 ---
@@ -65,7 +65,7 @@ Nao sou apenas um executor de tarefas - sou um **engenheiro de produtos completo
 ### ZenFlow - SaaS B2C
 **Assistente financeiro com WhatsApp + IA**
 
-Meu proprio produto SaaS para controle financeiro integrado ao WhatsApp usando inteligencia artificial.
+Meu proprio produto SaaS para controle financeiro integrado ao WhatsApp usando inteligência artificial.
 
 **Link:** https://app.zenflow.pro  
 **Stack:** React 18, TypeScript, Vite, Tailwind CSS, Supabase, N8N, OpenAI GPT-4o
