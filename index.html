@@ -131,12 +131,14 @@
         /* Text Gradients */
         .text-gradient {
             background: linear-gradient(135deg, #FFF 0%, #94A3B8 100%);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .text-gradient-accent {
             background: linear-gradient(to right, #6366F1, #8B5CF6, #06B6D4);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 200% auto;
@@ -190,12 +192,63 @@
         
         /* Typography */
         .tracking-super-tight { letter-spacing: -0.04em; }
+
+        /* Tech Stack Carousel - Hero Version */
+        .tech-carousel-wrapper-hero {
+            width: 100%;
+            overflow: hidden;
+            padding: 30px 0;
+            -webkit-mask-image: linear-gradient(
+                to right,
+                transparent,
+                black 5%,
+                black 95%,
+                transparent
+            );
+            mask-image: linear-gradient(
+                to right,
+                transparent,
+                black 5%,
+                black 95%,
+                transparent
+            );
+        }
+
+        .tech-carousel-hero {
+            animation: scroll-infinite 35s linear infinite;
+            will-change: transform;
+        }
+
+        .tech-carousel-hero:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-infinite {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .tech-logo-item-hero img {
+            filter: brightness(0.85);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            opacity: 0.9;
+        }
+
+        .tech-logo-item-hero:hover img {
+            filter: brightness(1.1);
+            transform: scale(1.2) translateY(-3px);
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="relative text-text-primary antialiased selection:bg-accent-primary selection:text-white">
 
     <!-- NAVIGATION -->
-    <nav class="fixed top-0 w-full z-50 glass-nav h-20 transition-all duration-300">
+    <nav class="fixed top-0 w-full z-50 glass-nav h-20 transition-all duration-300" aria-label="Navegação principal">
         <div class="container mx-auto px-6 lg:px-12 h-full flex justify-between items-center max-w-7xl">
             <!-- Logo -->
             <a href="#home" class="group flex items-center gap-2">
@@ -220,10 +273,6 @@
                     Serviços
                     <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#skills" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
-                    Habilidades
-                    <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
                 <a href="#portfolio" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
                     Portfolio
                     <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
@@ -243,6 +292,53 @@
                 <button id="mobile-menu-btn" class="md:hidden text-white p-2">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 z-50 md:hidden pointer-events-none">
+            <!-- Background sólido com transição própria -->
+            <div id="mobile-menu-bg" class="absolute inset-0 bg-bg-main transition-opacity duration-300 opacity-0"></div>
+            <div id="mobile-menu-gradient" class="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-transparent to-accent-secondary/10 transition-opacity duration-300 opacity-0"></div>
+            
+            <div id="mobile-menu-content" class="container mx-auto px-6 h-full flex flex-col relative z-10 transition-opacity duration-300 opacity-0">
+                <!-- Header -->
+                <div class="flex justify-between items-center h-20 flex-shrink-0">
+                    <a href="#home" class="flex items-center gap-2">
+                        <div class="relative w-9 h-9 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary to-accent-tertiary rounded-lg blur opacity-70"></div>
+                            <div class="relative w-full h-full bg-bg-main rounded-lg border border-white/10 flex items-center justify-center text-white font-bold text-sm tracking-tighter z-10">GR</div>
+                        </div>
+                        <span class="text-lg font-bold tracking-tight text-white">Gabriel Rabelo</span>
+                    </a>
+                    <button id="mobile-menu-close" class="text-white p-2 hover:bg-white/5 rounded-lg transition-colors">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Menu Links - Alinhado à direita -->
+                <nav class="flex-1 flex flex-col justify-center items-end gap-6 pr-4" aria-label="Menu mobile">
+                    <a href="#home" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                        Home
+                    </a>
+                    <a href="#sobre" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                        Sobre
+                    </a>
+                    <a href="#services" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                        Serviços
+                    </a>
+                    <a href="#portfolio" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                        Portfolio
+                    </a>
+                    <a href="#contato" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                        Contato
+                    </a>
+                </nav>
+
+                <!-- Footer info minimalista -->
+                <div class="pb-8 text-center flex-shrink-0">
+                    <p class="text-xs text-text-muted font-mono">Full-Stack Engineer & AI Specialist</p>
+                </div>
             </div>
         </div>
     </nav>
@@ -284,7 +380,7 @@
             </p>
 
             <!-- CTAs -->
-            <div class="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
+            <div class="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto mb-24">
                 <a href="https://www.linkedin.com/in/gabrielrabelob/" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white text-bg-main font-bold text-base rounded-full shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden">
                     <span class="relative z-10">Ver LinkedIn</span>
                     <i data-lucide="arrow-right" class="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform"></i>
@@ -295,14 +391,102 @@
                 </a>
             </div>
 
-            <!-- Trust Indicators -->
-            <div class="mt-24 w-full">
-                <p class="text-xs text-text-muted mb-6 font-mono uppercase tracking-widest">Construindo produtos para</p>
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-                    <span class="text-xl font-bold font-sans tracking-tighter hover:text-white transition-colors">ANBIMA<span class="text-accent-primary">Brasil</span></span>
-                    <span class="text-xl font-bold font-sans tracking-tighter hover:text-white transition-colors">Nike<span class="text-accent-secondary">Brasil</span></span>
-                    <span class="text-xl font-bold font-sans tracking-tighter hover:text-white transition-colors">Jequiti<span class="text-accent-tertiary">Cosméticos</span></span>
-                    <span class="text-xl font-bold font-sans tracking-tighter hover:text-white transition-colors">ZenFlow<span class="text-accent-success">SaaS</span></span>
+            <!-- Tech Stack Carousel -->
+            <div class="w-full max-w-6xl">
+                <p class="text-xs text-text-muted mb-8 font-mono uppercase tracking-widest text-center">Stack Completo</p>
+                
+                <!-- Infinite Scroll Carousel -->
+                <div class="tech-carousel-wrapper-hero relative">
+                    <!-- Scrolling container -->
+                    <div class="tech-carousel-hero flex gap-10 items-center">
+                        <!-- First set of logos -->
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/html.png" alt="HTML5" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/css.png" alt="CSS3" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/js.png" alt="JavaScript" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/sass.png" alt="Sass" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/physics.png" alt="React" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/Angular_gradient.png" alt="Angular" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/figma.png" alt="Figma" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/github.png" alt="GitHub" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/chatgpt.png" alt="ChatGPT" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/n8n-logo.png" alt="N8N" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/docker.png" alt="Docker" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/supabase.png" alt="Supabase" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/claude.png" alt="Claude AI" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0">
+                            <img src="img/gemini.jpg" alt="Gemini" class="w-14 h-14 md:w-16 md:h-16 object-contain rounded-lg">
+                        </div>
+
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/html.png" alt="HTML5" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/css.png" alt="CSS3" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/js.png" alt="JavaScript" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/sass.png" alt="Sass" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/physics.png" alt="React" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/Angular_gradient.png" alt="Angular" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/figma.png" alt="Figma" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/github.png" alt="GitHub" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/n8n-logo.png" alt="N8N" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/docker.png" alt="Docker" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/supabase.png" alt="Supabase" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/chatgpt.png" alt="ChatGPT" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/claude.png" alt="Claude AI" class="w-14 h-14 md:w-16 md:h-16 object-contain">
+                        </div>
+                        <div class="tech-logo-item-hero flex-shrink-0" aria-hidden="true">
+                            <img src="img/gemini.jpg" alt="Gemini" class="w-14 h-14 md:w-16 md:h-16 object-contain rounded-lg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -556,133 +740,6 @@
                     Começar Projeto
                     <i data-lucide="chevron-right" class="w-5 h-5"></i>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- HABILIDADES -->
-    <section id="skills" class="py-32 bg-bg-main relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-bg-main via-transparent to-bg-main z-10 pointer-events-none"></div>
-        
-        <div class="container mx-auto px-6 lg:px-12 max-w-7xl relative z-20">
-            <div class="text-center mb-24 reveal">
-                <h2 class="text-sm font-bold text-accent-success tracking-widest uppercase mb-4">Arsenal Técnico</h2>
-                <h2 class="text-4xl md:text-6xl font-bold text-white tracking-tight mb-6">Habilidades & Tecnologias</h2>
-                <p class="text-text-secondary text-lg max-w-2xl mx-auto">Ferramentas de elite para criar experiências digitais excepcionais.</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
-                <!-- HTML5 -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:rotate-3 transition-all duration-300 group cursor-default reveal">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/html.png" alt="HTML5" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-primary transition-colors">HTML5</span>
-                </div>
-
-                <!-- CSS3 -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:-rotate-3 transition-all duration-300 group cursor-default reveal" style="transition-delay: 50ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/css.png" alt="CSS3" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-secondary transition-colors">CSS3</span>
-                </div>
-
-                <!-- Sass -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:rotate-3 transition-all duration-300 group cursor-default reveal" style="transition-delay: 100ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/sass.png" alt="Sass" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-tertiary transition-colors">Sass</span>
-                </div>
-
-                <!-- JavaScript -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:-rotate-3 transition-all duration-300 group cursor-default reveal" style="transition-delay: 150ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/js.png" alt="JavaScript" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-success transition-colors">JavaScript</span>
-                </div>
-
-                <!-- Angular -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:rotate-3 transition-all duration-300 group cursor-default reveal border-2 border-accent-primary/30" style="transition-delay: 200ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/Angular_gradient.png" alt="Angular" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-primary transition-colors">Angular</span>
-                </div>
-
-                <!-- React -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:-rotate-3 transition-all duration-300 group cursor-default reveal" style="transition-delay: 250ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/physics.png" alt="React" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-secondary transition-colors">React</span>
-                </div>
-
-                <!-- Next.js -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:rotate-3 transition-all duration-300 group cursor-default reveal" style="transition-delay: 300ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/next-js.png" alt="Next.js" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-tertiary transition-colors">Next.js</span>
-                </div>
-
-                <!-- Git -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:-rotate-3 transition-all duration-300 group cursor-default reveal" style="transition-delay: 350ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/git.png" alt="Git" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-primary transition-colors">Git</span>
-                </div>
-
-                <!-- GitHub -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:rotate-3 transition-all duration-300 group cursor-default reveal" style="transition-delay: 400ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/github.png" alt="GitHub" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-secondary transition-colors">GitHub</span>
-                </div>
-
-                <!-- Figma -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:-rotate-3 transition-all duration-300 group cursor-default reveal" style="transition-delay: 450ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <img src="img/figma.png" alt="Figma" class="w-full h-full object-contain transition-transform group-hover:scale-110">
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-tertiary transition-colors">Figma</span>
-                </div>
-
-                <!-- N8N -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:rotate-3 transition-all duration-300 group cursor-default reveal border-2 border-accent-secondary/30" style="transition-delay: 500ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <i data-lucide="workflow" class="w-16 h-16 text-accent-secondary"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-secondary transition-colors">N8N</span>
-                </div>
-
-                <!-- Docker -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:-rotate-3 transition-all duration-300 group cursor-default reveal" style="transition-delay: 550ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <i data-lucide="container" class="w-16 h-16 text-accent-primary"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-primary transition-colors">Docker</span>
-                </div>
-
-                <!-- Supabase -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:rotate-3 transition-all duration-300 group cursor-default reveal border-2 border-accent-success/30" style="transition-delay: 600ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <i data-lucide="database" class="w-16 h-16 text-accent-success"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-success transition-colors">Supabase</span>
-                </div>
-
-                <!-- OpenAI -->
-                <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-110 hover:-rotate-3 transition-all duration-300 group cursor-default reveal border-2 border-accent-tertiary/30" style="transition-delay: 650ms;">
-                    <div class="w-20 h-20 flex items-center justify-center">
-                        <i data-lucide="brain-circuit" class="w-16 h-16 text-accent-tertiary"></i>
-                    </div>
-                    <span class="text-sm font-bold text-white group-hover:text-accent-tertiary transition-colors">OpenAI</span>
-                </div>
             </div>
         </div>
     </section>
@@ -1038,11 +1095,58 @@
 
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                console.log('Mobile menu toggled');
-            });
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuBg = document.getElementById('mobile-menu-bg');
+        const mobileMenuGradient = document.getElementById('mobile-menu-gradient');
+        const mobileMenuContent = document.getElementById('mobile-menu-content');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('pointer-events-none');
+            mobileMenu.classList.add('pointer-events-auto');
+            mobileMenuBg.classList.remove('opacity-0');
+            mobileMenuBg.classList.add('opacity-100');
+            mobileMenuGradient.classList.remove('opacity-0');
+            mobileMenuGradient.classList.add('opacity-100');
+            mobileMenuContent.classList.remove('opacity-0');
+            mobileMenuContent.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden';
         }
+
+        function closeMobileMenu() {
+            mobileMenuBg.classList.add('opacity-0');
+            mobileMenuBg.classList.remove('opacity-100');
+            mobileMenuGradient.classList.add('opacity-0');
+            mobileMenuGradient.classList.remove('opacity-100');
+            mobileMenuContent.classList.add('opacity-0');
+            mobileMenuContent.classList.remove('opacity-100');
+            setTimeout(() => {
+                mobileMenu.classList.add('pointer-events-none');
+                mobileMenu.classList.remove('pointer-events-auto');
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+        }
+
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+
+        // Fecha o menu ao clicar em um link
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Fecha o menu ao pressionar ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenuContent.classList.contains('opacity-100')) {
+                closeMobileMenu();
+            }
+        });
     </script>
 
 </body>
