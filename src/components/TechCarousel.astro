@@ -1,0 +1,36 @@
+---
+const logos = [
+  { src: '/img/html.png', alt: 'HTML5' },
+  { src: '/img/js.png', alt: 'JavaScript' },
+  { src: '/img/Angular_gradient.png', alt: 'Angular' },
+  { src: '/img/sass.png', alt: 'Sass' },
+  { src: '/img/physics.png', alt: 'React' },
+  { src: '/img/github.png', alt: 'GitHub' },
+  { src: '/img/figma.png', alt: 'Figma' },
+  { src: '/img/n8n-logo.png', alt: 'n8n' },
+  { src: '/img/claude.png', alt: 'Claude' },
+  { src: '/img/gemini.jpg', alt: 'Gemini' },
+  { src: '/img/chatgpt.png', alt: 'ChatGPT' },
+  { src: '/img/docker.png', alt: 'Docker' },
+  { src: '/img/supabase.png', alt: 'Supabase' },
+];
+---
+
+<div class="w-full max-w-6xl">
+    <p class="text-xs text-text-muted mb-8 font-mono uppercase tracking-widest text-center">Stack Completo</p>
+    
+    <div class="tech-carousel-wrapper-hero relative">
+        <div class="tech-carousel-hero flex gap-10 items-center">
+            {logos.map((logo) => (
+                <div class="tech-logo-item-hero flex-shrink-0">
+                    <img src={logo.src} alt={logo.alt} class="w-14 h-14 md:w-16 md:h-16 object-contain" />
+                </div>
+            ))}
+            {logos.map((logo) => (
+                <div class="tech-logo-item-hero flex-shrink-0">
+                    <img src={logo.src} alt={logo.alt} class="w-14 h-14 md:w-16 md:h-16 object-contain" />
+                </div>
+            ))}
+        </div>
+    </div>
+</div>

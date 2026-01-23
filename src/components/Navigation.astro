@@ -1,0 +1,126 @@
+<nav class="fixed top-0 w-full z-50 glass-nav h-20 transition-all duration-300" aria-label="Navegação principal">
+    <div class="container mx-auto px-6 lg:px-12 h-full flex justify-between items-center max-w-7xl">
+        <a href="#home" class="group flex items-center gap-2">
+            <div class="relative w-9 h-9 flex items-center justify-center">
+                <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary to-accent-tertiary rounded-lg blur opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative w-full h-full bg-bg-main rounded-lg border border-white/10 flex items-center justify-center text-white font-bold text-sm tracking-tighter z-10">GR</div>
+            </div>
+            <span class="text-lg font-bold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all duration-300">Gabriel Rabelo</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#home" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+                Home
+                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#sobre" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+                Sobre
+                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#services" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+                Serviços
+                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#portfolio" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+                Portfolio
+                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#contato" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+                Contato
+                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex items-center gap-4">
+            <a href="#contato" class="hidden md:flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent-primary/50 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 group relative overflow-hidden">
+                <span class="relative z-10">Vamos Conversar</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-tertiary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 z-50 md:hidden pointer-events-none bg-bg-main/95 backdrop-blur-xl opacity-0 transition-opacity duration-300">
+        <div class="container mx-auto px-6 h-full flex flex-col relative z-10">
+            <div class="flex justify-between items-center h-20 flex-shrink-0">
+                <a href="#home" class="flex items-center gap-2">
+                    <div class="relative w-9 h-9 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary to-accent-tertiary rounded-lg blur opacity-70"></div>
+                        <div class="relative w-full h-full bg-bg-main rounded-lg border border-white/10 flex items-center justify-center text-white font-bold text-sm tracking-tighter z-10">GR</div>
+                    </div>
+                    <span class="text-lg font-bold tracking-tight text-white">Gabriel Rabelo</span>
+                </a>
+                <button id="mobile-menu-close" class="text-white p-2 hover:bg-white/5 rounded-lg transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Menu Links - Alinhado à direita -->
+            <nav class="flex-1 flex flex-col justify-center items-end gap-6 pr-4" aria-label="Menu mobile">
+                <a href="#home" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                    Home
+                </a>
+                <a href="#sobre" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                    Sobre
+                </a>
+                <a href="#services" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                    Serviços
+                </a>
+                <a href="#portfolio" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                    Portfolio
+                </a>
+                <a href="#contato" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
+                    Contato
+                </a>
+            </nav>
+
+            <div class="pb-8 text-center flex-shrink-0">
+                <p class="text-xs text-text-muted font-mono">Full-Stack Engineer & AI Specialist</p>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+    function openMobileMenu() {
+        mobileMenu.classList.remove('pointer-events-none', 'opacity-0');
+        mobileMenu.classList.add('pointer-events-auto', 'opacity-100');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+        mobileMenu.classList.add('pointer-events-none', 'opacity-0');
+        mobileMenu.classList.remove('pointer-events-auto', 'opacity-100');
+        document.body.style.overflow = '';
+    }
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+    }
+
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+    }
+
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('opacity-100')) {
+            closeMobileMenu();
+        }
+    });
+
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+</script>

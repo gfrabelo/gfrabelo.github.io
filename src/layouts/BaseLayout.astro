@@ -1,0 +1,181 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Gabriel Rabelo | Full-Stack Engineer & AI Specialist',
+  description = 'Full-Stack Engineer & AI Specialist. Transformo ideias em produtos escaláveis usando IA, automação e as melhores práticas de engenharia. ANBIMA, Nike, ZenFlow.'
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Gabriel Rabelo">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content="https://gabrielrabelo.vercel.app/img/coding.png">
+    <meta property="og:url" content="https://gabrielrabelo.vercel.app">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="relative text-text-primary antialiased selection:bg-accent-primary selection:text-white">
+    <slot />
+</body>
+</html>
+
+<style is:global>
+    body {
+        background-color: #020410;
+        color: #F8FAFC;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+
+    .glass-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .glass-card:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.15);
+        transform: translateY(-8px) scale(1.01);
+    }
+
+    .glass-nav {
+        background: rgba(2, 4, 16, 0.7);
+        backdrop-filter: blur(24px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .text-gradient {
+        background: linear-gradient(135deg, #FFF 0%, #94A3B8 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-accent {
+        background: linear-gradient(to right, #6366F1, #8B5CF6, #06B6D4);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% auto;
+        animation: gradient-xy 4s linear infinite;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .avatar-glow {
+        position: relative;
+    }
+    .avatar-glow::before {
+        content: '';
+        position: absolute;
+        inset: -3px;
+        background: linear-gradient(45deg, #6366F1, #06B6D4, #8B5CF6, #6366F1);
+        border-radius: 9999px;
+        z-index: -1;
+        animation: spin 3s linear infinite;
+        filter: blur(8px);
+    }
+
+    .input-premium {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+    .input-premium:focus {
+        background: rgba(99, 102, 241, 0.05);
+        border-color: #6366F1;
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        transform: scale(1.01);
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #020410; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6366F1; }
+    
+    .tracking-super-tight { letter-spacing: -0.04em; }
+
+    .tech-carousel-wrapper-hero {
+        width: 100%;
+        overflow: hidden;
+        padding: 30px 0;
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 5%,
+            black 95%,
+            transparent
+        );
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 5%,
+            black 95%,
+            transparent
+        );
+    }
+
+    .tech-carousel-hero {
+        animation: scroll-infinite 20s linear infinite;
+        will-change: transform;
+    }
+
+    .tech-carousel-hero:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes scroll-infinite {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .tech-logo-item-hero img {
+        filter: brightness(0.85);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        opacity: 0.9;
+    }
+
+    .tech-logo-item-hero:hover img {
+        filter: brightness(1.1);
+        transform: scale(1.2) translateY(-3px);
+        opacity: 1;
+    }
+</style>

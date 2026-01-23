@@ -1,74 +1,18 @@
-﻿# Gabriel Rabelo | Portfolio
+# Gabriel Rabelo | Portfolio
 
 **Full-Stack Engineer & AI Specialist**
 
-Transformo ideias em produtos escalaveis usando IA, automação e as melhores praticas de engenharia.
+Portfolio moderno construido com Astro e Tailwind CSS, destacando projetos de alto impacto para ANBIMA, Nike e Jequiti.
+
+**Link:** https://gfrabelo.github.io
 
 ---
 
 ## Sobre
 
-Desenvolvedor Full-Stack com **8+ anos de experiencia** construindo produtos digitais de alto impacto. Atualmente na **ANBIMA**, onde ja entreguei +120 merge requests em sistemas criticos de certificações financeiras.
+Desenvolvedor Full-Stack com **8+ anos de experiencia** construindo produtos digitais de alto impacto. Atualmente na **ANBIMA**, onde ja entreguei +120 merge requests em sistemas criticos de certificacoes financeiras.
 
 Nao sou apenas um executor de tarefas - sou um **engenheiro de produtos completo** que pensa em modelos de negocio, arquitetura e experiencia do usuario. Como **AI Builder**, uso LLMs de ponta para entregar velocidade sem sacrificar qualidade.
-
----
-
-## Especialidades
-
-**Engenharia Full-Stack**
-- Next.js, React, Angular, Node.js, TypeScript
-
-**Inteligencia Artificial**
-- LLMs, Fine-tuning, RAG, Prompt Engineering
-
-**Automacao**
-- N8N, Webhooks, Integrações WhatsApp
-
-**UI/UX**
-- Figma, Design Systems, Component Driven Development
-
-**Backend & Infra**
-- Supabase, PostgreSQL, Docker, APIs REST
-
----
-
-## Experiencia
-
-### ANBIMA (2024-2026)
-**Full-Stack Engineer** | Certificações Financeiras
-
-- +120 MRs entregues em producao
-- Integracao Adyen (gateway de pagamento)
-- Fluxos de inscricao e agendamento de exames
-- Tech: Next.js, React, Zustand, Sass, SSR, Keycloak
-
-### Nike Brasil (2020-2023)
-**Front-End Developer** | E-commerce & Plataformas
-
-- Nike Membership (programa de fidelidade)
-- Central de Uniformes (plataforma B2B)
-- Cartão Presente (gift cards digitais)
-- Quiz interativo "Encontre seu Tenis"
-
-### Jequiti Cosmeticos (2019-2020)
-**Front-End Developer** | Campanhas Digitais
-
-- Landing pages de alto impacto
-- Promoções com influencers (Carlinhos Maia, Eliana)
-- Alta taxa de conversao
-
----
-
-## Projetos
-
-### ZenFlow - SaaS B2C
-**Assistente financeiro com WhatsApp + IA**
-
-Meu proprio produto SaaS para controle financeiro integrado ao WhatsApp usando inteligência artificial.
-
-**Link:** https://app.zenflow.pro  
-**Stack:** React 18, TypeScript, Vite, Tailwind CSS, Supabase, N8N, OpenAI GPT-4o
 
 ---
 
@@ -76,30 +20,115 @@ Meu proprio produto SaaS para controle financeiro integrado ao WhatsApp usando i
 
 **Frontend**
 - Next.js, React, Angular, TypeScript
-- Tailwind CSS, Sass, Styled Components
+- Astro, Tailwind CSS, Sass
 
 **Backend & Database**
-- Node.js, Express
-- Supabase, PostgreSQL
-- REST APIs, GraphQL
+- Node.js, Supabase, PostgreSQL
+- REST APIs
 
 **AI & Automacao**
-- OpenAI (GPT-4, Fine-tuning)
-- N8N (workflows)
-- Prompt Engineering, RAG
+- OpenAI GPT-4, Claude, Gemini
+- N8N workflows
+- Fine-tuning, RAG, Prompt Engineering
 
 **DevOps & Tools**
 - Docker, Git, GitHub
-- Vercel, Netlify
-- Figma, VS Code
+- Vercel, Figma
+
+---
+
+## Projetos Destacados
+
+### ZenFlow - SaaS B2C
+Assistente financeiro com WhatsApp + IA para controle financeiro inteligente.
+
+**Link:** https://app.zenflow.pro  
+**Stack:** React 18, TypeScript, Vite, Tailwind CSS, Supabase, N8N, OpenAI GPT-4o
+
+### ANBIMA - Certificacoes Financeiras
+Plataforma completa de inscricao e certificacao financeira com +120 MRs entregues.
+
+**Tech:** Next.js, React, Zustand, Sass, SSR, Keycloak, Adyen
+
+---
+
+## Como Executar Localmente
+
+### Pre-requisitos
+- Node.js 18+
+
+### Instalacao
+
+```bash
+# Clone o repositorio
+git clone https://github.com/gfrabelo/gfrabelo.github.io.git
+cd gfrabelo.github.io
+
+# Instale as dependencias
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+
+# Acesse http://localhost:4321
+```
+
+### Build para Producao
+
+```bash
+npm run build
+```
+
+O build otimizado sera gerado na pasta `dist/`.
+
+---
+
+## Estrutura do Projeto
+
+```
+portfolio/
+├── public/
+│   ├── img/          # Imagens e assets
+│   └── files/        # Arquivos para download (CV)
+├── src/
+│   ├── components/   # Componentes reutilizaveis do Astro
+│   ├── layouts/      # Layouts base da aplicacao
+│   ├── pages/        # Paginas do site
+│   └── styles/       # Estilos globais
+├── astro.config.mjs  # Configuracao do Astro
+└── tailwind.config.mjs # Configuracao do Tailwind
+```
+
+---
+
+## Recursos
+
+- Design responsivo e mobile-first
+- Animacoes suaves com scroll reveal
+- Glassmorphism e gradientes animados
+- Menu mobile com overlay
+- Carrossel infinito de tecnologias
+- SEO otimizado
+- Performance excelente (Lighthouse 90+)
+
+---
+
+## Deploy
+
+Deploy automatico via Vercel conectado a branch main.
+
+```bash
+# Build e deploy
+npm run build
+vercel --prod
+```
 
 ---
 
 ## Contato
 
-Estou disponivel para **projetos freelance**, **consultorias em IA** e **oportunidades full-time**.
+Disponivel para **projetos freelance**, **consultorias em IA** e **oportunidades full-time**.
 
-**Portfolio:** https://gfrabelo.github.io  
 **LinkedIn:** https://www.linkedin.com/in/gabrielrabelob/  
 **Email:** gabrielrabelob@gmail.com  
 **WhatsApp:** +55 11 92158-6783  
@@ -107,4 +136,13 @@ Estou disponivel para **projetos freelance**, **consultorias em IA** e **oportun
 
 ---
 
-**2026 Gabriel Rabelo | Feito com codigo e dedicacao**
+## Tecnologias
+
+- **Astro** - Meta-framework moderno para sites estaticos de alta performance
+- **Tailwind CSS** - Framework CSS utility-first
+- **TypeScript** - Tipagem estatica para maior seguranca
+- **Lucide Icons** - Biblioteca de icones moderna
+
+---
+
+**2026 Gabriel Rabelo | Desenvolvido com codigo e dedicacao**
