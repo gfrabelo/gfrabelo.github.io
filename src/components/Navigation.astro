@@ -37,89 +37,127 @@
                 <span class="relative z-10">Vamos Conversar</span>
                 <div class="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-tertiary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
-            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-    </div>
+            <!-- Fluid Menu for Mobile -->
+            <div class="md:hidden relative z-50">
+                <div id="fluid-menu-container" class="relative w-12 h-12" data-expanded="false">
+                    <div class="relative">
+                        <!-- Toggle Button (Always visible) -->
+                        <div 
+                            id="fluid-menu-toggle"
+                            class="relative w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 cursor-pointer rounded-full z-50 flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
+                        >
+                            <div class="relative w-6 h-6">
+                                <!-- Menu Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute inset-0 w-6 h-6 text-white transition-all duration-300 ease-in-out origin-center menu-icon opacity-100 scale-100 rotate-0">
+                                    <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+                                </svg>
+                                <!-- X Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute inset-0 w-6 h-6 text-white transition-all duration-300 ease-in-out origin-center close-icon opacity-0 scale-0 -rotate-180">
+                                    <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+                                </svg>
+                            </div>
+                        </div>
 
-    <div id="mobile-menu" class="fixed inset-0 z-50 md:hidden pointer-events-none bg-bg-main/95 backdrop-blur-xl opacity-0 transition-opacity duration-300">
-        <div class="container mx-auto px-6 h-full flex flex-col relative z-10">
-            <div class="flex justify-between items-center h-20 flex-shrink-0">
-                <a href="#home" class="flex items-center gap-2">
-                    <div class="relative w-9 h-9 flex items-center justify-center">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary to-accent-tertiary rounded-lg blur opacity-70"></div>
-                        <div class="relative w-full h-full bg-bg-main rounded-lg border border-white/10 flex items-center justify-center text-white font-bold text-sm tracking-tighter z-10">GR</div>
+                        <!-- Items Container -->
+                        <!-- Item 1: Home -->
+                        <a href="#home" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 40;" aria-label="Home">
+                            <i data-lucide="home" class="w-5 h-5"></i>
+                        </a>
+                        <!-- Item 2: About -->
+                        <a href="#sobre" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 39;" aria-label="Sobre">
+                            <i data-lucide="user" class="w-5 h-5"></i>
+                        </a>
+                         <!-- Item 3: Services -->
+                         <a href="#services" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 38;" aria-label="Serviços">
+                            <i data-lucide="briefcase" class="w-5 h-5"></i>
+                        </a>
+                        <!-- Item 4: Portfolio -->
+                        <a href="#portfolio" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 37;" aria-label="Portfolio">
+                            <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+                        </a>
+                        <!-- Item 5: Contact -->
+                        <a href="#contato" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 36;" aria-label="Contato">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
                     </div>
-                    <span class="text-lg font-bold tracking-tight text-white">Gabriel Rabelo</span>
-                </a>
-                <button id="mobile-menu-close" class="text-white p-2 hover:bg-white/5 rounded-lg transition-colors">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-
-            <!-- Menu Links - Alinhado à direita -->
-            <nav class="flex-1 flex flex-col justify-center items-end gap-6 pr-4" aria-label="Menu mobile">
-                <a href="#home" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
-                    Home
-                </a>
-                <a href="#sobre" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
-                    Sobre
-                </a>
-                <a href="#services" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
-                    Serviços
-                </a>
-                <a href="#portfolio" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
-                    Portfolio
-                </a>
-                <a href="#contato" class="mobile-menu-link text-2xl font-bold text-text-secondary hover:text-white transition-all duration-300 transform hover:translate-x-[-8px] text-right">
-                    Contato
-                </a>
-            </nav>
-
-            <div class="pb-8 text-center flex-shrink-0">
-                <p class="text-xs text-text-muted font-mono">Full-Stack Engineer & AI Specialist</p>
+                </div>
             </div>
         </div>
     </div>
+
 </nav>
 
 <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+    // Fluid Menu Logic
+    const container = document.getElementById('fluid-menu-container');
+    const toggleBtn = document.getElementById('fluid-menu-toggle');
+    const menuIcon = toggleBtn?.querySelector('.menu-icon');
+    const closeIcon = toggleBtn?.querySelector('.close-icon');
+    const items = document.querySelectorAll('.fluid-menu-item');
+    let isExpanded = false;
 
-    function openMobileMenu() {
-        mobileMenu.classList.remove('pointer-events-none', 'opacity-0');
-        mobileMenu.classList.add('pointer-events-auto', 'opacity-100');
-        document.body.style.overflow = 'hidden';
+    function toggleMenu() {
+        isExpanded = !isExpanded;
+        
+        // Toggle Icon Animation
+        if (isExpanded) {
+            menuIcon?.classList.add('opacity-0', 'scale-0', 'rotate-180');
+            menuIcon?.classList.remove('opacity-100', 'scale-100', 'rotate-0');
+            closeIcon?.classList.add('opacity-100', 'scale-100', 'rotate-0');
+            closeIcon?.classList.remove('opacity-0', 'scale-0', '-rotate-180');
+        } else {
+            menuIcon?.classList.remove('opacity-0', 'scale-0', 'rotate-180');
+            menuIcon?.classList.add('opacity-100', 'scale-100', 'rotate-0');
+            closeIcon?.classList.remove('opacity-100', 'scale-100', 'rotate-0');
+            closeIcon?.classList.add('opacity-0', 'scale-0', '-rotate-180');
+        }
+
+        // Animated Items
+        items.forEach((item, index) => {
+            const htmlItem = item as HTMLElement;
+            if (isExpanded) {
+                // Open state
+                htmlItem.style.transform = `translateY(${(index + 1) * 56}px)`;
+                htmlItem.style.opacity = '1';
+                htmlItem.style.pointerEvents = 'auto'; 
+                
+                // Add unique transition delay for "fluid" effect
+                htmlItem.style.transition = `transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 50}ms, opacity 300ms ease-out ${index * 50}ms`;
+
+            } else {
+                // Closed state
+                htmlItem.style.transform = `translateY(0px)`;
+                htmlItem.style.opacity = '0';
+                htmlItem.style.pointerEvents = 'none'; 
+                
+                // Reverse delay for closing
+                const reverseIndex = items.length - 1 - index;
+                htmlItem.style.transition = `transform 300ms cubic-bezier(0.4, 0, 0.2, 1) ${reverseIndex * 30}ms, opacity 200ms ease-in ${reverseIndex * 30}ms`;
+            }
+        });
     }
 
-    function closeMobileMenu() {
-        mobileMenu.classList.add('pointer-events-none', 'opacity-0');
-        mobileMenu.classList.remove('pointer-events-auto', 'opacity-100');
-        document.body.style.overflow = '';
-    }
-
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', openMobileMenu);
-    }
-
-    if (mobileMenuClose) {
-        mobileMenuClose.addEventListener('click', closeMobileMenu);
-    }
-
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
+    // Toggle Click
+    toggleBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
     });
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileMenu.classList.contains('opacity-100')) {
-            closeMobileMenu();
+    // Close on Item Click
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            if(isExpanded) toggleMenu();
+        });
+    });
+
+    // Close on Outside Click
+    document.addEventListener('click', (e) => {
+        if (isExpanded && container && !container.contains(e.target as Node)) {
+            toggleMenu();
         }
     });
 
+    // Initialize Lucide icons if not already done
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
