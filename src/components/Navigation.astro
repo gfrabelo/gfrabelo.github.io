@@ -1,82 +1,172 @@
-<nav class="fixed top-0 w-full z-50 glass-nav h-20 transition-all duration-300" aria-label="Navegação principal">
-    <div class="container mx-auto px-6 lg:px-12 h-full flex justify-between items-center max-w-7xl">
+<nav
+    class="fixed top-0 w-full z-50 glass-nav h-20 transition-all duration-300"
+    aria-label="Navegação principal"
+>
+    <div
+        class="container mx-auto px-6 lg:px-12 h-full flex justify-between items-center max-w-7xl"
+    >
         <a href="#home" class="group flex items-center gap-2">
-            <div class="relative w-9 h-9 flex items-center justify-center">
-                <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary to-accent-tertiary rounded-lg blur opacity-70 group-hover:opacity-100 transition-opacity"></div>
-                <div class="relative w-full h-full bg-bg-main rounded-lg border border-white/10 flex items-center justify-center text-white font-bold text-sm tracking-tighter z-10">GR</div>
-            </div>
-            <span class="text-lg font-bold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all duration-300">Gabriel Rabelo</span>
+            <span
+                class="text-xl font-bold tracking-tight text-white/90 group-hover:text-white transition-colors duration-300"
+                >Gabriel Rabelo<span class="text-accent-primary">.</span></span
+            >
         </a>
 
         <div class="hidden md:flex items-center gap-8">
-            <a href="#home" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+            <a
+                href="#home"
+                class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group"
+            >
                 Home
-                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+                <span
+                    class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"
+                ></span>
             </a>
-            <a href="#sobre" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+            <a
+                href="#sobre"
+                class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group"
+            >
                 Sobre
-                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+                <span
+                    class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"
+                ></span>
             </a>
-            <a href="#services" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+            <a
+                href="#services"
+                class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group"
+            >
                 Serviços
-                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+                <span
+                    class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"
+                ></span>
             </a>
-            <a href="#portfolio" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+            <a
+                href="#portfolio"
+                class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group"
+            >
                 Portfolio
-                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+                <span
+                    class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"
+                ></span>
             </a>
-            <a href="#contato" class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group">
+            <a
+                href="#contato"
+                class="relative text-sm font-medium text-text-secondary hover:text-white transition-colors duration-300 group"
+            >
                 Contato
-                <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
+                <span
+                    class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-primary transition-all duration-300 group-hover:w-full"
+                ></span>
             </a>
         </div>
 
         <!-- CTA -->
         <div class="flex items-center gap-4">
-            <a href="#contato" class="hidden md:flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent-primary/50 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 group relative overflow-hidden">
+            <a
+                href="#contato"
+                class="hidden md:flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent-primary/50 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 group relative overflow-hidden"
+            >
                 <span class="relative z-10">Vamos Conversar</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-tertiary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-tertiary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                </div>
             </a>
             <!-- Fluid Menu for Mobile -->
             <div class="md:hidden relative z-50">
-                <div id="fluid-menu-container" class="relative w-12 h-12" data-expanded="false">
+                <div
+                    id="fluid-menu-container"
+                    class="relative w-12 h-12"
+                    data-expanded="false"
+                >
                     <div class="relative">
                         <!-- Toggle Button (Always visible) -->
-                        <div 
+                        <div
                             id="fluid-menu-toggle"
                             class="relative w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 cursor-pointer rounded-full z-50 flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
                         >
                             <div class="relative w-6 h-6">
                                 <!-- Menu Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute inset-0 w-6 h-6 text-white transition-all duration-300 ease-in-out origin-center menu-icon opacity-100 scale-100 rotate-0">
-                                    <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="absolute inset-0 w-6 h-6 text-white transition-all duration-300 ease-in-out origin-center menu-icon opacity-100 scale-100 rotate-0"
+                                >
+                                    <line x1="4" x2="20" y1="12" y2="12"
+                                    ></line><line x1="4" x2="20" y1="6" y2="6"
+                                    ></line><line x1="4" x2="20" y1="18" y2="18"
+                                    ></line>
                                 </svg>
                                 <!-- X Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute inset-0 w-6 h-6 text-white transition-all duration-300 ease-in-out origin-center close-icon opacity-0 scale-0 -rotate-180">
-                                    <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="absolute inset-0 w-6 h-6 text-white transition-all duration-300 ease-in-out origin-center close-icon opacity-0 scale-0 -rotate-180"
+                                >
+                                    <path d="M18 6 6 18"></path><path
+                                        d="m6 6 12 12"></path>
                                 </svg>
                             </div>
                         </div>
 
                         <!-- Items Container -->
                         <!-- Item 1: Home -->
-                        <a href="#home" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 40;" aria-label="Home">
+                        <a
+                            href="#home"
+                            class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300"
+                            style="z-index: 40;"
+                            aria-label="Home"
+                        >
                             <i data-lucide="home" class="w-5 h-5"></i>
                         </a>
                         <!-- Item 2: About -->
-                        <a href="#sobre" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 39;" aria-label="Sobre">
+                        <a
+                            href="#sobre"
+                            class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300"
+                            style="z-index: 39;"
+                            aria-label="Sobre"
+                        >
                             <i data-lucide="user" class="w-5 h-5"></i>
                         </a>
-                         <!-- Item 3: Services -->
-                         <a href="#services" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 38;" aria-label="Serviços">
+                        <!-- Item 3: Services -->
+                        <a
+                            href="#services"
+                            class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300"
+                            style="z-index: 38;"
+                            aria-label="Serviços"
+                        >
                             <i data-lucide="briefcase" class="w-5 h-5"></i>
                         </a>
                         <!-- Item 4: Portfolio -->
-                        <a href="#portfolio" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 37;" aria-label="Portfolio">
+                        <a
+                            href="#portfolio"
+                            class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300"
+                            style="z-index: 37;"
+                            aria-label="Portfolio"
+                        >
                             <i data-lucide="folder-git-2" class="w-5 h-5"></i>
                         </a>
                         <!-- Item 5: Contact -->
-                        <a href="#contato" class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300" style="z-index: 36;" aria-label="Contato">
+                        <a
+                            href="#contato"
+                            class="fluid-menu-item absolute top-0 left-0 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300"
+                            style="z-index: 36;"
+                            aria-label="Contato"
+                        >
                             <i data-lucide="mail" class="w-5 h-5"></i>
                         </a>
                     </div>
@@ -84,32 +174,31 @@
             </div>
         </div>
     </div>
-
 </nav>
 
 <script>
     // Fluid Menu Logic
-    const container = document.getElementById('fluid-menu-container');
-    const toggleBtn = document.getElementById('fluid-menu-toggle');
-    const menuIcon = toggleBtn?.querySelector('.menu-icon');
-    const closeIcon = toggleBtn?.querySelector('.close-icon');
-    const items = document.querySelectorAll('.fluid-menu-item');
+    const container = document.getElementById("fluid-menu-container");
+    const toggleBtn = document.getElementById("fluid-menu-toggle");
+    const menuIcon = toggleBtn?.querySelector(".menu-icon");
+    const closeIcon = toggleBtn?.querySelector(".close-icon");
+    const items = document.querySelectorAll(".fluid-menu-item");
     let isExpanded = false;
 
     function toggleMenu() {
         isExpanded = !isExpanded;
-        
+
         // Toggle Icon Animation
         if (isExpanded) {
-            menuIcon?.classList.add('opacity-0', 'scale-0', 'rotate-180');
-            menuIcon?.classList.remove('opacity-100', 'scale-100', 'rotate-0');
-            closeIcon?.classList.add('opacity-100', 'scale-100', 'rotate-0');
-            closeIcon?.classList.remove('opacity-0', 'scale-0', '-rotate-180');
+            menuIcon?.classList.add("opacity-0", "scale-0", "rotate-180");
+            menuIcon?.classList.remove("opacity-100", "scale-100", "rotate-0");
+            closeIcon?.classList.add("opacity-100", "scale-100", "rotate-0");
+            closeIcon?.classList.remove("opacity-0", "scale-0", "-rotate-180");
         } else {
-            menuIcon?.classList.remove('opacity-0', 'scale-0', 'rotate-180');
-            menuIcon?.classList.add('opacity-100', 'scale-100', 'rotate-0');
-            closeIcon?.classList.remove('opacity-100', 'scale-100', 'rotate-0');
-            closeIcon?.classList.add('opacity-0', 'scale-0', '-rotate-180');
+            menuIcon?.classList.remove("opacity-0", "scale-0", "rotate-180");
+            menuIcon?.classList.add("opacity-100", "scale-100", "rotate-0");
+            closeIcon?.classList.remove("opacity-100", "scale-100", "rotate-0");
+            closeIcon?.classList.add("opacity-0", "scale-0", "-rotate-180");
         }
 
         // Animated Items
@@ -118,18 +207,17 @@
             if (isExpanded) {
                 // Open state
                 htmlItem.style.transform = `translateY(${(index + 1) * 56}px)`;
-                htmlItem.style.opacity = '1';
-                htmlItem.style.pointerEvents = 'auto'; 
-                
+                htmlItem.style.opacity = "1";
+                htmlItem.style.pointerEvents = "auto";
+
                 // Add unique transition delay for "fluid" effect
                 htmlItem.style.transition = `transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 50}ms, opacity 300ms ease-out ${index * 50}ms`;
-
             } else {
                 // Closed state
                 htmlItem.style.transform = `translateY(0px)`;
-                htmlItem.style.opacity = '0';
-                htmlItem.style.pointerEvents = 'none'; 
-                
+                htmlItem.style.opacity = "0";
+                htmlItem.style.pointerEvents = "none";
+
                 // Reverse delay for closing
                 const reverseIndex = items.length - 1 - index;
                 htmlItem.style.transition = `transform 300ms cubic-bezier(0.4, 0, 0.2, 1) ${reverseIndex * 30}ms, opacity 200ms ease-in ${reverseIndex * 30}ms`;
@@ -138,27 +226,27 @@
     }
 
     // Toggle Click
-    toggleBtn?.addEventListener('click', (e) => {
+    toggleBtn?.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleMenu();
     });
 
     // Close on Item Click
-    items.forEach(item => {
-        item.addEventListener('click', () => {
-            if(isExpanded) toggleMenu();
+    items.forEach((item) => {
+        item.addEventListener("click", () => {
+            if (isExpanded) toggleMenu();
         });
     });
 
     // Close on Outside Click
-    document.addEventListener('click', (e) => {
+    document.addEventListener("click", (e) => {
         if (isExpanded && container && !container.contains(e.target as Node)) {
             toggleMenu();
         }
     });
 
     // Initialize Lucide icons if not already done
-    if (typeof lucide !== 'undefined') {
+    if (typeof lucide !== "undefined") {
         lucide.createIcons();
     }
 </script>
