@@ -1,148 +1,191 @@
 # Gabriel Rabelo | Portfolio
 
-**Full-Stack Engineer & AI Specialist**
+**Software Engineer & AI Specialist**
 
-Portfolio moderno construido com Astro e Tailwind CSS, destacando projetos de alto impacto para ANBIMA, Nike e Jequiti.
+Portfolio moderno construído com Astro e Tailwind CSS, destacando projetos de alto impacto para ANBIMA, Nike e Jequiti.
 
-**Link:** https://gfrabelo.github.io
-
----
-
-## Sobre
-
-Desenvolvedor Full-Stack com **8+ anos de experiencia** construindo produtos digitais de alto impacto. Atualmente na **ANBIMA**, onde ja entreguei +120 merge requests em sistemas criticos de certificacoes financeiras.
-
-Nao sou apenas um executor de tarefas - sou um **engenheiro de produtos completo** que pensa em modelos de negocio, arquitetura e experiencia do usuario. Como **AI Builder**, uso LLMs de ponta para entregar velocidade sem sacrificar qualidade.
+🔗 **Link:** https://gfrabelo.github.io
 
 ---
 
-## Stack Tecnica
+## 📊 Sobre
 
-**Frontend**
-- Next.js, React, Angular, TypeScript
-- Astro, Tailwind CSS, Sass
+Software Engineer com **8+ anos de experiência** construindo produtos digitais de alto impacto. Atualmente na **ANBIMA**, onde já entreguei +120 merge requests em sistemas críticos de certificações financeiras.
 
-**Backend & Database**
-- Node.js, Supabase, PostgreSQL
-- REST APIs
-
-**AI & Automacao**
-- OpenAI GPT-4, Claude, Gemini
-- N8N workflows
-- Fine-tuning, RAG, Prompt Engineering
-
-**DevOps & Tools**
-- Docker, Git, GitHub
-- Vercel, Figma
+Engenheiro de produtos completo que pensa em modelos de negócio, arquitetura e experiência do usuário. Como **AI Builder**, uso LLMs de ponta para entregar velocidade sem sacrificar qualidade.
 
 ---
 
-## Projetos Destacados
+## 💻 Stack Técnica
 
-### ZenFlow - SaaS B2C
-Assistente financeiro com WhatsApp + IA para controle financeiro inteligente.
+**Frontend**  
+Astro, React, Next.js, Angular, TypeScript, Tailwind CSS, Sass
 
-**Link:** https://app.zenflow.pro  
-**Stack:** React 18, TypeScript, Vite, Tailwind CSS, Supabase, N8N, OpenAI GPT-4o
+**Backend & Database**  
+Node.js, Python, Supabase, PostgreSQL, REST APIs
 
-### ANBIMA - Certificacoes Financeiras
-Plataforma completa de inscricao e certificacao financeira com +120 MRs entregues.
+**AI & Automação**  
+OpenAI GPT-4, Claude Sonnet, Google Gemini, N8N, Fine-tuning, RAG, Prompt Engineering
 
-**Tech:** Next.js, React, Zustand, Sass, SSR, Keycloak, Adyen
+**DevOps & Tools**  
+Docker, Git, GitHub, Vercel, Figma, FFmpeg
 
 ---
 
-## Como Executar Localmente
-
-### Pre-requisitos
-- Node.js 18+
-
-### Instalacao
+## 🚀 Como Executar
 
 ```bash
-# Clone o repositorio
+# Clone e instale
 git clone https://github.com/gfrabelo/gfrabelo.github.io.git
 cd gfrabelo.github.io
-
-# Instale as dependencias
 npm install
 
-# Inicie o servidor de desenvolvimento
+# Desenvolvimento
 npm run dev
-
 # Acesse http://localhost:4321
-```
 
-### Build para Producao
-
-```bash
+# Build para produção
 npm run build
 ```
 
-O build otimizado sera gerado na pasta `dist/`.
+---
+
+## 🎬 Tutorial: Hero Animation com IA
+
+O hero deste portfolio é único - um vídeo em ASCII art com rotação 360° gerado por IA e otimizado para web.
+
+### 1. Gerar o Vídeo (Google Flow - VEO3)
+
+Use este prompt no Google Flow ou similar:
+
+```
+Create a perfectly looping animated portrait for a tech portfolio hero section.
+
+SUBJECT: Professional headshot of a software engineer, centered composition. 
+Head and upper torso visible (chest level crop). Subject faces forward in a 
+confident, approachable pose. Modern tech professional aesthetic.
+
+VISUAL STYLE: Clean ASCII art effect using monospaced terminal characters 
+(A-Z, a-z, 0-9, @#%&+=:;<>/\|_-()). Characters create depth through density 
+variation. Color palette: cyan (#00D9FF), electric blue (#0EA5E9), and white 
+on pure black background. Subtle scan-line effect for authenticity.
+
+ANIMATION: Smooth 360° camera orbit around subject at constant speed. One 
+complete rotation forming a perfect loop. Subject remains completely still. 
+Camera moves through all angles including profile and back views.
+
+BACKGROUND: Solid black (#000000) with NO animation, NO falling characters, 
+NO effects. Completely static and minimal.
+
+LOOP REQUIREMENTS (CRITICAL): Frame 1 = Frame N (identical). No fade, no 
+flicker, no seam. Seamless infinite loop.
+
+TECHNICAL SPECS: 
+- Aspect ratio: 16:9 or 4:3
+- Duration: 8-12 seconds
+- Frame rate: 30fps minimum
+- Export: MP4 or WebM for web optimization
+
+NEGATIVE PROMPTS: no matrix rain, no falling code, no background animation, 
+no glitch effects, no face distortion, no body crop below chest, no fade 
+transitions, no loop seam
+```
+
+### 2. Otimizar o Vídeo (FFmpeg)
+
+Depois de gerar, otimize para web:
+
+```bash
+# Remover background (opcional)
+# Use EZGif.com → Remove Background → Download
+
+# Converter GIF para WebP otimizado
+ffmpeg -i hero.gif \
+  -vcodec libwebp_anim \
+  -loop 0 \
+  -compression_level 6 \
+  -q:v 75 \
+  -preset picture \
+  -an -vsync 0 \
+  -y hero.webp
+
+# Resultado: 60-80% menor que GIF original
+# Exemplo: 24.61 MB → 9.73 MB
+```
+
+### 3. Usar no Componente
+
+```astro
+<picture>
+  <source srcset="/img/hero.webp" type="image/webp">
+  <img src="/img/hero.gif" alt="Hero Animation" loading="eager" />
+</picture>
+```
+
+**Créditos:** Inspirado no [@rubenmarcus](https://github.com/rubenmarcus)
 
 ---
 
-## Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 portfolio/
 ├── public/
-│   ├── img/          # Imagens e assets
-│   └── files/        # Arquivos para download (CV)
+│   ├── img/              # Assets otimizados
+│   │   ├── hero-final.webp    # Hero WebP (9.73 MB)
+│   │   ├── hero-final.gif     # Hero fallback (24.61 MB)
+│   │   └── ...                # Logos de tecnologias
+│   └── files/            # Downloads (CV)
 ├── src/
-│   ├── components/   # Componentes reutilizaveis do Astro
-│   ├── layouts/      # Layouts base da aplicacao
-│   ├── pages/        # Paginas do site
-│   └── styles/       # Estilos globais
-├── astro.config.mjs  # Configuracao do Astro
-└── tailwind.config.mjs # Configuracao do Tailwind
+│   ├── components/       # Componentes Astro
+│   │   ├── Hero.astro
+│   │   ├── TechCarousel.astro
+│   │   ├── Projects.astro
+│   │   └── ...
+│   ├── layouts/          # Layouts
+│   ├── pages/            # Páginas
+│   └── styles/           # Estilos globais
+├── docs/                 # Documentação
+└── astro.config.mjs
 ```
 
 ---
 
-## Recursos
+## 🌟 Features
 
-- Design responsivo e mobile-first
-- Animacoes suaves com scroll reveal
-- Glassmorphism e gradientes animados
-- Menu mobile com overlay
-- Carrossel infinito de tecnologias
-- SEO otimizado
-- Performance excelente (Lighthouse 90+)
-
----
-
-## Deploy
-
-Deploy automatico via Vercel conectado a branch main.
-
-```bash
-# Build e deploy
-npm run build
-vercel --prod
-```
+- ✅ Design responsivo e mobile-first
+- ✅ Animações suaves e glassmorphism
+- ✅ Hero animation única gerada com IA
+- ✅ Carrossel de tecnologias com tooltips
+- ✅ SEO otimizado
+- ✅ Performance Lighthouse 95+
+- ✅ WebP otimizado (60% menor que GIF)
 
 ---
 
-## Contato
+## 📞 Contato
 
-Disponivel para **projetos freelance**, **consultorias em IA** e **oportunidades full-time**.
+Disponível para **projetos freelance**, **consultorias em IA** e **oportunidades full-time**.
 
-**LinkedIn:** https://www.linkedin.com/in/gabrielrabelob/  
-**Email:** gabrielrabelob@gmail.com  
-**WhatsApp:** +55 11 92158-6783  
-**GitHub:** https://github.com/gfrabelo
-
----
-
-## Tecnologias
-
-- **Astro** - Meta-framework moderno para sites estaticos de alta performance
-- **Tailwind CSS** - Framework CSS utility-first
-- **TypeScript** - Tipagem estatica para maior seguranca
-- **Lucide Icons** - Biblioteca de icones moderna
+**🌐 Site:** https://gabrielrabelo.dev  
+**💼 LinkedIn:** https://www.linkedin.com/in/gabrielrabelob/  
+**📧 Email:** gabrielrabelob@gmail.com  
+**💬 WhatsApp:** +55 11 92158-6783  
+**🐙 GitHub:** https://github.com/gfrabelo
 
 ---
 
-**2026 Gabriel Rabelo | Desenvolvido com codigo e dedicacao**
+## 📜 Licença
+
+Código aberto para **fins educacionais**.
+
+✅ Use como referência  
+✅ Adapte conceitos  
+✅ Compartilhe conhecimento  
+
+❌ Não copie conteúdo pessoal (textos, fotos, projetos)
+
+---
+
+**2026 Gabriel Rabelo**  
+Desenvolvido com Astro, Tailwind CSS e dedicação 🚀

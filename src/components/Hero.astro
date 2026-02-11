@@ -48,7 +48,7 @@ import TechCarousel from "./TechCarousel.astro";
                 <h1
                     class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-white"
                 >
-                    Full-Stack Engineer <br />
+                    Software Engineer <br />
                     <span class="text-gradient-accent relative inline-block">
                         & AI Specialist
                         <div
@@ -95,7 +95,7 @@ import TechCarousel from "./TechCarousel.astro";
                 </div>
             </div>
 
-            <!-- Right Column: Hero GIF (Span 5/12) -->
+            <!-- Right Column: Hero WebP Animado (Span 5/12) -->
             <div
                 class="relative w-full max-w-[500px] lg:max-w-full flex justify-center lg:justify-end lg:col-span-5"
             >
@@ -115,15 +115,24 @@ import TechCarousel from "./TechCarousel.astro";
                         <div
                             class="relative w-full aspect-[4/5] flex items-end justify-center lg:justify-end"
                         >
-                            <img
-                                src="/img/hero-final.gif"
-                                alt="Gabriel Rabelo Animated Portrait"
-                                class="w-full h-full object-contain object-bottom drop-shadow-2xl"
-                                width="600"
-                                height="750"
-                                loading="eager"
-                                decoding="async"
-                            />
+                            <!-- WebP Animado com Fallback Estático -->
+                            <picture class="w-full h-full">
+                                <!-- WebP Animado (9.73 MB) - Navegadores modernos -->
+                                <source 
+                                    srcset="/img/hero-final.webp" 
+                                    type="image/webp"
+                                >
+                                <!-- PNG Estático - Fallback leve para navegadores sem suporte WebP -->
+                                <img
+                                    src="/img/eu-no-bg.png"
+                                    alt="Gabriel Rabelo - Software Engineer & AI Specialist"
+                                    class="w-full h-full object-contain object-bottom drop-shadow-2xl"
+                                    width="600"
+                                    height="750"
+                                    loading="eager"
+                                    decoding="async"
+                                />
+                            </picture>
                         </div>
                     </div>
                 </div>
